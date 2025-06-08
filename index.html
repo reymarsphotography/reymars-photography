@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reymar's Photography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        header {
+            height: 100vh;
+            background: url('https://via.placeholder.com/1600x900') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div>Reymar's Photography</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to Reymar's Photography</h1>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Reymar, a professional photographer based in Miami. I specialize in portrait, wedding, and event photography. My goal is to capture timeless moments and tell stories through my lens.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/600x400" alt="Sample Photo 1">
+            <img src="https://via.placeholder.com/600x400" alt="Sample Photo 2">
+            <img src="https://via.placeholder.com/600x400" alt="Sample Photo 3">
+            <img src="https://via.placeholder.com/600x400" alt="Sample Photo 4">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: contact@reymarsphotography.com</p>
+        <p>Phone: (305) 123-4567</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Reymar's Photography. All rights reserved.</p>
+        <div class="social">
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+</body>
+</html>
