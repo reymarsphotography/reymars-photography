@@ -4,55 +4,73 @@
   --text-light: #f4f4f4;
   --text-dark: #222;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --header-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: var(--text-dark);
+  line-height: 1.6;
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  height: var(--header-height);
   background: white;
   box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 0 40px;
   z-index: 999;
 }
 
 /* Contenedor del logo */
 .nav-left .logo {
   display: inline-block;
-  max-width: 200px;
+  max-width: 160px;
 }
 
 /* Imagen del logo */
 #logo-img {
-  height: 60px;       /* altura fija para que no crezca mucho */
-  max-width: 100%;    /* que nunca exceda el contenedor */
+  height: 50px;       /* altura fija más pequeña para evitar que crezca */
+  max-width: 100%;
   display: block;
   object-fit: contain;
 }
 
+/* Navegación derecha */
 .nav-right a {
-  margin-left: 20px;
+  margin-left: 24px;
   text-decoration: none;
   color: var(--text-dark);
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
+.nav-right a:hover,
+.nav-right a:focus {
+  color: var(--primary-color);
+  outline: none;
+}
+
+/* Botón hamburguesa */
 .hamburger {
   display: none;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 5px;
 }
 
 .hamburger span {
@@ -61,20 +79,22 @@ body {
   background: var(--text-dark);
   margin: 4px 0;
   display: block;
+  border-radius: 2px;
 }
 
 .hero {
-  padding: 200px 40px 80px;
+  padding: calc(var(--header-height) + 60px) 40px 80px; /* agrega espacio por el header fijo */
   text-align: center;
   background: #000;
   color: white;
 }
 
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: clamp(3rem, 5vw, 5rem);
   margin: 0;
   font-weight: 900;
   letter-spacing: 4px;
+  user-select: none;
 }
 
 .gallery-section {
@@ -111,7 +131,7 @@ body {
   max-width: 800px;
   margin: auto;
   text-align: center;
-  scroll-margin-top: 120px;
+  scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
 .about-section {
@@ -128,27 +148,38 @@ body {
 
 .footer {
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
   font-size: 0.9rem;
   color: #777;
   background: #f0f0f0;
 }
 
+/* Responsive */
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+
   .nav-right {
     display: none;
     flex-direction: column;
     background: white;
     position: absolute;
-    top: 100%;
+    top: var(--header-height);
     right: 0;
+    width: 200px;
     padding: 20px;
     box-shadow: var(--shadow);
+    border-radius: 0 0 0 12px;
   }
+
   .nav-right.active {
     display: flex;
+  }
+
+  .nav-right a {
+    margin: 12px 0;
+    font-size: 1.1rem;
   }
 }
