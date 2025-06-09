@@ -26,17 +26,17 @@ body {
   z-index: 999;
 }
 
-/* Ajuste para el logo y su contenedor */
-.logo {
+/* Contenedor del logo */
+.nav-left .logo {
   display: inline-block;
-  max-width: 200px; /* Limita ancho máximo */
+  max-width: 200px;
 }
 
+/* Imagen del logo */
 #logo-img {
-  height: 60px;      /* Altura fija */
-  max-width: 100%;   /* Que no se salga del contenedor */
+  height: 60px;       /* altura fija para que no crezca mucho */
+  max-width: 100%;    /* que nunca exceda el contenedor */
   display: block;
-  margin: 0 auto;
   object-fit: contain;
 }
 
