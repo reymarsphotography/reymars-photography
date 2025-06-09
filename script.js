@@ -1,51 +1,39 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REYMARS | Fotografía Profesional</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="navbar">
-        <div class="nav-left">
-            <a href="#" class="logo">REYMARS</a>
-        </div>
-        <div class="nav-right">
-            <a href="#work">TRABAJOS</a>
-            <a href="#about">SOBRE MÍ</a>
-            <a href="#contact">CONTACTO</a>
-            <a href="#" class="social-icon">IG</a>
-        </div>
-    </div>
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryContainer = document.getElementById("gallery-container");
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>REYMARS</h1>
-            <p>Fotografía Profesional</p>
-        </div>
-    </div>
+    const imageUrls = [
+        "https://i.imgur.com/2a6uHVc.jpeg",
+        "https://i.imgur.com/wUD71AK.jpeg",
+        "https://i.imgur.com/FbBWqmg.jpeg",
+        "https://i.imgur.com/4lERITz.jpeg",
+        "https://i.imgur.com/TQtf2S5.jpeg",
+        "https://i.imgur.com/FP5xOxH.jpeg",
+        "https://i.imgur.com/X6pTVNx.jpeg",
+        "https://i.imgur.com/fTUAz2K.jpeg",
+        "https://i.imgur.com/8fkn88s.jpeg",
+        "https://i.imgur.com/HmMPhol.jpeg",
+        "https://i.imgur.com/2KcEGmI.jpeg",
+        "https://i.imgur.com/5XVTCgT.jpeg",
+        "https://i.imgur.com/x1aFy64.jpeg",
+        "https://i.imgur.com/ALnvgCM.jpeg",
+        "https://i.imgur.com/f3HH7uL.jpeg",
+        "https://i.imgur.com/QDwXrI8.jpeg",
+        "https://i.imgur.com/rG8Jd5L.jpeg",
+        "https://i.imgur.com/3YQ4AAO.jpeg",
+        "https://i.imgur.com/yVqGlqd.jpeg",
+        "https://i.imgur.com/3kwnRRo.jpeg",
+        "https://i.imgur.com/gkiolcI.jpeg",
+        "https://i.imgur.com/Mr1D5gq.jpeg",
+        "https://i.imgur.com/jGaXbKY.jpeg",
+        "https://i.imgur.com/JhKjtZv.jpeg",
+        "https://i.imgur.com/VNg8XRe.jpeg",
+        "https://i.imgur.com/7gIn9o2.jpeg"
+    ];
 
-    <div class="gallery-section" id="work">
-        <h2>TRABAJOS RECIENTES</h2>
-        <div class="gallery-grid" id="gallery-container"></div>
-    </div>
-
-    <div class="about-section" id="about">
-        <h2>SOBRE MÍ</h2>
-        <p>Soy un fotógrafo establecido en la ciudad de Miami. Desde muy joven me he interesado por el arte en general, destacándome en las artes visuales. Me gusta estudiar a mis clientes con el objetivo de llevar al máximo mi nivel fotográfico. Cada sesión es única y exclusiva en dependencia de los gustos de cada persona.</p>
-        <p>Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
-    </div>
-
-    <div class="contact-section" id="contact">
-        <h2>CONTACTO</h2>
-        <p>reymarsphotography@gmail.com<br>+1 786-564-8544</p>
-    </div>
-
-    <div class="footer">
-        <p>© 2023 REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    imageUrls.forEach((url, index) => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = `Foto ${index + 1}`;
+        galleryContainer.appendChild(img);
+    });
+});
