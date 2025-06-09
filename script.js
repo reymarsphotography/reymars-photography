@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.id = 'lightbox';
   lightbox.style.cssText = `
     position: fixed; top:0; left:0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     display: flex; justify-content: center; align-items: center;
     visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
     z-index: 2000;
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const img = document.createElement('img');
   img.style.maxWidth = '90%';
   img.style.maxHeight = '90%';
-  img.style.borderRadius = '8px';
+  img.style.borderRadius = '4px';
   img.style.boxShadow = '0 0 40px rgba(255,255,255,0.1)';
   lightbox.appendChild(img);
   document.body.appendChild(lightbox);
