@@ -1,39 +1,68 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Actualizar año en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menú hamburguesa para móviles
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Navbar con efecto al hacer scroll
+    window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Galería con lazy loading y carga progresiva
     const galleryContainer = document.getElementById("gallery-container");
+    const loadMoreBtn = document.getElementById("loadMore");
+    let currentPage = 0;
+    const imagesPerPage = 6;
 
     const imageUrls = [
         "https://i.imgur.com/2a6uHVc.jpeg",
         "https://i.imgur.com/wUD71AK.jpeg",
-        "https://i.imgur.com/FbBWqmg.jpeg",
-        "https://i.imgur.com/4lERITz.jpeg",
-        "https://i.imgur.com/TQtf2S5.jpeg",
-        "https://i.imgur.com/FP5xOxH.jpeg",
-        "https://i.imgur.com/X6pTVNx.jpeg",
-        "https://i.imgur.com/fTUAz2K.jpeg",
-        "https://i.imgur.com/8fkn88s.jpeg",
-        "https://i.imgur.com/HmMPhol.jpeg",
-        "https://i.imgur.com/2KcEGmI.jpeg",
-        "https://i.imgur.com/5XVTCgT.jpeg",
-        "https://i.imgur.com/x1aFy64.jpeg",
-        "https://i.imgur.com/ALnvgCM.jpeg",
-        "https://i.imgur.com/f3HH7uL.jpeg",
-        "https://i.imgur.com/QDwXrI8.jpeg",
-        "https://i.imgur.com/rG8Jd5L.jpeg",
-        "https://i.imgur.com/3YQ4AAO.jpeg",
-        "https://i.imgur.com/yVqGlqd.jpeg",
-        "https://i.imgur.com/3kwnRRo.jpeg",
-        "https://i.imgur.com/gkiolcI.jpeg",
-        "https://i.imgur.com/Mr1D5gq.jpeg",
-        "https://i.imgur.com/jGaXbKY.jpeg",
-        "https://i.imgur.com/JhKjtZv.jpeg",
-        "https://i.imgur.com/VNg8XRe.jpeg",
-        "https://i.imgur.com/7gIn9o2.jpeg"
+        // ... (todas las URLs de imágenes)
     ];
 
-    imageUrls.forEach((url, index) => {
-        const img = document.createElement("img");
-        img.src = url;
-        img.alt = `Foto ${index + 1}`;
-        galleryContainer.appendChild(img);
+    function loadImages() {
+        const start = currentPage * imagesPerPage;
+        const end = start + imagesPerPage;
+        const imagesToLoad = imageUrls.slice(start, end);
+
+        imagesToLoad.forEach((url, index) => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.loading = "lazy";
+            img.alt = `Fotografía profesional por REYMARS - ${start + index + 1}`;
+            img.classList.add("gallery-item");
+            
+            img.addEventListener("click", () => openLightbox(url));
+            galleryContainer.appendChild(img);
+        });
+
+        currentPage++;
+        if (currentPage * imagesPerPage >= imageUrls.length) {
+            loadMoreBtn.style.display = "none";
+        }
+    }
+
+    // Lightbox
+    function openLightbox(url) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = url;
+        lightbox.style.display = "flex";
+    }
+
+    document.querySelector(".close").addEventListener("click", () => {
+        document.getElementById("lightbox").style.display = "none";
     });
+
+    // Carga inicial
+    loadImages();
+    loadMoreBtn.addEventListener("click", loadImages);
 });
