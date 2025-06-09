@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fotografía profesional en Miami por REYMARS. Retratos, sesiones personalizadas y arte visual.">
-    <meta name="keywords" content="fotografía, Miami, retratos, sesiones fotográficas, arte visual">
-    <title>REYMARS | Fotografía Profesional</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fotografía profesional en Miami por REYMARS. Retratos, sesiones personalizadas y arte visual." />
+  <meta name="keywords" content="fotografía, Miami, retratos, sesiones fotográficas, arte visual" />
+  <title>REYMARS | Fotografía Profesional</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-left">
-            <a href="#" class="logo">REYMARS</a>
-        </div>
-        <nav class="nav-right" id="navLinks">
-            <a href="#work">TRABAJOS</a>
-            <a href="#about">SOBRE MÍ</a>
-            <a href="#contact">CONTACTO</a>
-            <a href="https://instagram.com/tu-usuario" class="social-icon" target="_blank" rel="noopener noreferrer">IG</a>
-        </nav>
-        <button class="hamburger" id="hamburger" aria-label="Menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
-    <main>
-        <section class="hero" aria-label="Portada principal">
-            <div class="hero-content">
-                <h1>REYMARS</h1>
-                <p>Fotografía Profesional</p>
-            </div>
-        </section>
-
-        <section class="gallery-section" id="work" aria-label="Trabajos recientes">
-            <h2>TRABAJOS RECIENTES</h2>
-            <div class="gallery-grid" id="gallery-container"></div>
-            <button id="loadMore" class="load-more">Ver más</button>
-        </section>
-
-        <section class="about-section" id="about" aria-label="Sobre el fotógrafo">
-            <h2>SOBRE MÍ</h2>
-            <p>Soy un fotógrafo establecido en la ciudad de Miami. Desde muy joven me he interesado por el arte en general, destacándome en las artes visuales. Me gusta estudiar a mis clientes con el objetivo de llevar al máximo mi nivel fotográfico. Cada sesión es única y exclusiva en dependencia de los gustos de cada persona.</p>
-            <p>Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
-        </section>
-
-        <section class="contact-section" id="contact" aria-label="Información de contacto">
-            <h2>CONTACTO</h2>
-            <p>
-                <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br>
-                <a href="tel:+17865648544">+1 786-564-8544</a>
-            </p>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© <span id="year"></span> REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
-    </footer>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Vista ampliada de la fotografía">
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="#" class="logo">REYMARS</a>
     </div>
+    <nav class="nav-right" id="navLinks">
+      <a href="#work">TRABAJOS</a>
+      <a href="#about">SOBRE MÍ</a>
+      <a href="#contact">CONTACTO</a>
+      <a href="https://instagram.com/tu-usuario" target="_blank" rel="noopener noreferrer">IG</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-    <script src="script.js" defer></script>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>REYMARS</h1>
+        <p>Fotografía Profesional</p>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="work">
+      <h2>TRABAJOS RECIENTES</h2>
+      <div class="gallery-grid" id="gallery-container"></div>
+      <button id="loadMore" class="load-more">Ver más</button>
+    </section>
+
+    <section class="about-section" id="about">
+      <h2>SOBRE MÍ</h2>
+      <p>Soy un fotógrafo establecido en Miami. Me destaco en las artes visuales y personalizo cada sesión según el cliente.</p>
+      <p>Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>CONTACTO</h2>
+      <p>
+        <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br>
+        <a href="tel:+17865648544">+1 786-564-8544</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Vista ampliada" />
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
