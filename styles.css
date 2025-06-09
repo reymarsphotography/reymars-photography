@@ -4,11 +4,6 @@
   --text-light: #f4f4f4;
   --text-dark: #222;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --header-height: 70px;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -16,61 +11,52 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: var(--text-dark);
-  line-height: 1.6;
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: var(--header-height);
   background: white;
   box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 15px 40px;
   z-index: 999;
 }
 
-/* Contenedor del logo */
 .nav-left .logo {
   display: inline-block;
-  max-width: 160px;
+  max-width: 180px;
 }
 
-/* Imagen del logo */
 #logo-img {
-  height: 50px;       /* altura fija más pequeña para evitar que crezca */
+  height: 55px;
   max-width: 100%;
   display: block;
   object-fit: contain;
 }
 
-/* Navegación derecha */
 .nav-right a {
-  margin-left: 24px;
+  margin-left: 20px;
   text-decoration: none;
   color: var(--text-dark);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-right a:hover,
-.nav-right a:focus {
+.nav-right a:hover {
   color: var(--primary-color);
-  outline: none;
 }
 
-/* Botón hamburguesa */
 .hamburger {
   display: none;
   flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  z-index: 1100;
 }
 
 .hamburger span {
@@ -83,46 +69,85 @@ body {
 }
 
 .hero {
-  padding: calc(var(--header-height) + 60px) 40px 80px; /* agrega espacio por el header fijo */
+  padding: 180px 40px 80px;
   text-align: center;
   background: #000;
   color: white;
 }
 
 .hero-content h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: 4.5rem;
   margin: 0;
   font-weight: 900;
   letter-spacing: 4px;
-  user-select: none;
 }
 
 .gallery-section {
   padding: 80px 40px;
   background: #f7f7f7;
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 10px; /* base for masonry effect */
   gap: 20px;
-  margin-top: 40px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 4 / 3;
 }
 
+/* Masonry effect using grid-row-end */
+.gallery-grid img {
+  grid-row-end: span 30; /* Default span */
+}
+
+.gallery-grid img:nth-child(5n) { grid-row-end: span 35; }
+.gallery-grid img:nth-child(3n) { grid-row-end: span 32; }
+.gallery-grid img:nth-child(7n) { grid-row-end: span 28; }
+
 .gallery-grid img:hover {
-  transform: scale(1.05) translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Lightbox Styles */
+#lightbox {
+  position: fixed;
+  top:0; left:0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2000;
+  cursor: pointer;
+  padding: 20px;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  object-fit: contain;
+}
+
+#lightbox.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .about-section,
@@ -131,7 +156,7 @@ body {
   max-width: 800px;
   margin: auto;
   text-align: center;
-  scroll-margin-top: calc(var(--header-height) + 20px);
+  scroll-margin-top: 120px;
 }
 
 .about-section {
@@ -144,42 +169,32 @@ body {
 .contact-section {
   background: var(--primary-color);
   color: var(--text-light);
+  border-radius: 8px;
 }
 
 .footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px;
   font-size: 0.9rem;
   color: #777;
   background: #f0f0f0;
 }
 
-/* Responsive */
-
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
   .nav-right {
     display: none;
     flex-direction: column;
     background: white;
     position: absolute;
-    top: var(--header-height);
+    top: 100%;
     right: 0;
-    width: 200px;
     padding: 20px;
     box-shadow: var(--shadow);
-    border-radius: 0 0 0 12px;
   }
-
   .nav-right.active {
     display: flex;
-  }
-
-  .nav-right a {
-    margin: 12px 0;
-    font-size: 1.1rem;
   }
 }
