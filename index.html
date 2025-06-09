@@ -3,142 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reymars Fotografía | Capturando momentos familiares</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <title>Galería de Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header><div class="container">
-    <div class="logo-container"><img src="images/reymars-black-logo.jpg" alt="Reymars Fotografía Logo" class="logo"/></div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#portfolio">Portafolio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
-    </nav>
-  </div></header>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Capturando momentos familiares inolvidables</h1>
-      <p>Fotografía profesional para familias y parejas</p>
-      <a href="#contacto" class="btn">Reserva tu sesión</a>
-    </div>
+  <header>
+    <h1>Galería de Portafolio</h1>
+  </header>
+
+  <main class="gallery-container">
+    <!-- Imágenes posicionadas según tu solicitud -->
+    <div class="gallery-item left"><img src="images/Dario mirando a la derecha.webp" alt="Dario" /></div>
+    <div class="gallery-item left"><img src="images/Daniela Fuente izquierda.webp" alt="Daniela Fuente" /></div>
+    <div class="gallery-item center"><img src="images/Marilia Low key mirando a la izquierda.webp" alt="Marilia Low key" /></div>
+    <div class="gallery-item right"><img src="images/Steven Low key mirando a la izquierda.webp" alt="Steven Low key" /></div>
+    <div class="gallery-item right"><img src="images/Lazaro flores rojas mirando a la derecha.webp" alt="Lazaro flores" /></div>
+
+    <!-- Resto de imágenes mezcladas -->
+    <div class="gallery-item"><img src="images/Marinalva azul mirando a la izquierda.webp" alt="Marinalva azul" /></div>
+    <div class="gallery-item"><img src="images/Anay Feliz mirando al frente izquierdo.webp" alt="Anay feliz" /></div>
+    <div class="gallery-item"><img src="images/Steven leyendo centro.webp" alt="Steven leyendo" /></div>
+    <div class="gallery-item"><img src="images/Sami bussiness lado derecho.webp" alt="Sami" /></div>
+    <div class="gallery-item"><img src="images/Lazaro smoking centro.webp" alt="Lazaro smoking" /></div>
+    <div class="gallery-item"><img src="images/Embarazo y Juli del lado izquierdo.webp" alt="Embarazo y Juli" /></div>
+    <div class="gallery-item"><img src="images/Mari rosa mirando centro abajo.webp" alt="Mari rosa" /></div>
+    <div class="gallery-item"><img src="images/Marinalva Princesa close up centro.webp" alt="Marinalva close up" /></div>
+    <div class="gallery-item"><img src="images/jony y stef hig key centro.webp" alt="Jony y Stef" /></div>
+    <div class="gallery-item"><img src="images/Juli piano lado derecho.webp" alt="Juli piano" /></div>
+    <div class="gallery-item"><img src="images/Marinalva princesa mirando a la derecha.webp" alt="Marinalva princesa" /></div>
+    <div class="gallery-item"><img src="images/Mari jirasoles centro.webp" alt="Mari jirasoles" /></div>
+    <div class="gallery-item"><img src="images/Embarazo arriba lado derecho.webp" alt="Embarazo arriba" /></div>
+    <div class="gallery-item"><img src="images/Steven feliz centro.webp" alt="Steven feliz" /></div>
+    <div class="gallery-item"><img src="images/Familia yenki centro.webp" alt="Familia Yenki" /></div>
+    <div class="gallery-item"><img src="images/Daimer y Marilia mirandose uno al otro en el centro.webp" alt="Daimer y Marilia" /></div>
+    <div class="gallery-item"><img src="images/Daniela sentada mirando a la derecha.webp" alt="Daniela sentada" /></div>
+    <div class="gallery-item"><img src="images/Marinalva ventana mirando a la izquierda.webp" alt="Marinalva ventana" /></div>
+    <div class="gallery-item"><img src="images/Nino reloj del lado izquierdo.webp" alt="Niño reloj" /></div>
+  </main>
+
+  <!-- Formulario de contacto funcional con Formspree -->
+  <section class="contact-section">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/xyzjedrz" method="POST">
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="message">Mensaje</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <h2>Mi Portafolio</h2>
-        <p>Explora algunos de nuestros retratos más memorables</p>
-      </div>
-      <div class="gallery"></div>
-    </div>
-  </section>
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/5354058156" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  <!-- Servicios -->
-  <section id="servicios" class="services">
-    <div class="section-header">
-      <h2>Servicios</h2>
-      <p>Ofrezco soluciones fotográficas para cada ocasión familiar</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card"><i class="fas fa-users"></i><h3>Sesiones Familiares</h3><p>Captura la esencia y conexión de tu familia con sesiones personalizadas.</p></div>
-      <div class="service-card"><i class="fas fa-heart"></i><h3>Sesiones de Pareja</h3><p>Retratos íntimos que reflejan el amor y la conexión especial entre ustedes.</p></div>
-      <div class="service-card"><i class="fas fa-baby"></i><h3>Fotografía Infantil</h3><p>Captura la magia de la infancia con fotografías naturales y espontáneas.</p></div>
-      <div class="service-card"><i class="fas fa-calendar-alt"></i><h3>Eventos Especiales</h3><p>Aniversarios, celebraciones y momentos importantes de tu familia.</p></div>
-    </div>
-  </section>
-
-  <!-- Sobre Mi -->
-  <section id="sobre-mi" class="about">
-    <div class="container">
-      <div class="about-content">
-        <h2>Sobre Mí</h2>
-        <p>Hola, soy Rey Mars, fotógrafo especializado en capturar momentos familiares y de pareja con más de 8 años de experiencia. Mi enfoque combina técnica profesional con sensibilidad emocional.</p>
-        <p>Me especializo en crear imágenes auténticas que reflejan la conexión única de cada familia y pareja, buscando siempre crear fotografías que cuenten historias y evoquen emociones.</p>
-        <p>Mi filosofía es simple: cada fotografía debe ser un tesoro que perdure en el tiempo, capturando no solo imágenes, sino sentimientos y recuerdos para toda la vida.</p>
-        <div class="signature">Rey Mars</div>
-      </div>
-      <div class="about-image"><div class="image-frame"></div></div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="section-header"><h2>Lo Que Dicen Mis Clientes</h2></div>
-    <div class="testimonial-container">
-      <div class="testimonial active"><p>"Las fotos de nuestra familia superaron todas nuestras expectativas. Rey Mars tiene un don para capturar momentos espontáneos y llenos de emoción."</p><div class="client">- Familia Rodríguez</div></div>
-      <div class="testimonial"><p>"Nuestra sesión de pareja fue una experiencia maravillosa. Las fotos reflejan perfectamente nuestra conexión y son un tesoro para toda la vida."</p><div class="client">- Ana y Carlos</div></div>
-      <div class="testimonial"><p>"Contratamos a Rey para fotografiar el primer cumpleaños de nuestro hijo. Las fotos capturaron la magia del día y la personalidad de nuestro bebé."</p><div class="client">- Marta y Luis</div></div>
-    </div>
-    <div class="testimonial-controls">
-      <button class="prev"><i class="fas fa-chevron-left"></i></button>
-      <div class="indicators"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-      <button class="next"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="contact">
-    <div class="section-header"><h2>Contacto</h2><p>¿Listo para capturar tus momentos familiares?</p></div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Información de Contacto</h3>
-        <p><i class="fas fa-envelope"></i> reymarsphotography@gmail.com</p>
-        <p><i class="fas fa-phone"></i> 786‑564‑8544</p>
-        <p><i class="fas fa-map-marker-alt"></i> Madrid, España</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-        </div>
-      </div>
-      <div class="contact-form">
-        <form id="contactForm" action="https://formspree.io/f/xyzjedrz" method="POST">
-          <input type="text" name="name" placeholder="Nombre completo" required/>
-          <input type="email" name="email" placeholder="Correo electrónico" required/>
-          <input type="tel" name="phone" placeholder="Teléfono"/>
-          <select name="service" required>
-            <option value="" disabled selected>Tipo de servicio</option>
-            <option value="family">Sesión Familiar</option>
-            <option value="couple">Sesión de Pareja</option>
-            <option value="children">Fotografía Infantil</option>
-            <option value="event">Evento Especial</option>
-            <option value="other">Otro</option>
-          </select>
-          <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-          <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-logo"><img src="images/reymars-black-logo.jpg" alt="Reymars Fotografía"/></div>
-      <div class="footer-links"><h4>Enlaces Rápidos</h4><ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#portfolio">Portafolio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul></div>
-      <div class="footer-newsletter"><h4>Consejos Fotográficos</h4><p>Recibe consejos para preparar tu sesión fotográfica familiar</p><form><input type="email" placeholder="Tu correo electrónico"/><button type="submit">Suscribirse</button></form></div>
-    </div>
-    <div class="copyright"><p>&copy; 2025 Reymars Fotografía. Todos los derechos reservados.</p></div>
+    <p>&copy; 2025 Portafolio Fotográfico</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
