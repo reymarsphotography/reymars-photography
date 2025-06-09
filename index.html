@@ -5,15 +5,409 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Fotografía profesional en Miami por REYMARS. Retratos, sesiones personalizadas y arte visual." />
   <meta name="keywords" content="fotografía, Miami, retratos, sesiones fotográficas, arte visual" />
-  <title>REYMAR's Photography | Professional photographer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>REYMARS | Fotografía Profesional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #1a1a1a;
+      --secondary-color: #333;
+      --accent-color: #a67c52;
+      --text-light: #f4f4f4;
+      --text-dark: #222;
+      --text-gray: #777;
+      --background-light: #f9f9f9;
+      --background-dark: #0d0d0d;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      position: relative;
+      display: inline-block;
+    }
+
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: var(--accent-color);
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 10px 40px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-center {
+      text-align: center;
+    }
+
+    #logo-img {
+      height: 70px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+      filter: grayscale(100%);
+    }
+
+    #logo-img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    .nav-right {
+      position: absolute;
+      right: 40px;
+    }
+
+    .nav-right a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--secondary-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-right a:hover {
+      color: var(--accent-color);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 25px;
+      background: var(--primary-color);
+      margin: 4px 0;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                  url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      color: var(--text-light);
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 5.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .btn:hover {
+      background: var(--text-light);
+      color: var(--primary-color);
+    }
+
+    .gallery-section {
+      padding: 100px 40px;
+      background: var(--background-light);
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: var(--shadow);
+      aspect-ratio: 3/4;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-section,
+    .contact-section {
+      padding: 100px 40px;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      scroll-margin-top: 120px;
+    }
+
+    .about-section {
+      background-color: #ffffff;
+      color: var(--primary-color);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: var(--text-gray);
+      text-align: left;
+    }
+
+    .contact-section {
+      background: var(--primary-color);
+      color: var(--text-light);
+      border-radius: 8px;
+    }
+
+    .contact-section a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: opacity 0.3s;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+
+    .contact-section a:hover {
+      opacity: 0.8;
+      color: var(--accent-color);
+    }
+
+    .contact-section p {
+      margin-top: 20px;
+    }
+
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin: 0 10px;
+      line-height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent-color);
+      transform: translateY(-5px);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      background: var(--background-light);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-right {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+      
+      .nav-right.active {
+        display: block;
+      }
+      
+      .nav-right a {
+        display: block;
+        margin: 15px 0;
+      }
+      
+      .nav-center {
+        flex: 1;
+        text-align: left;
+      }
+      
+      #logo-img {
+        height: 50px;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+      }
+      
+      .hero-content h1 {
+        font-size: 3.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .about-section, .contact-section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
     <div class="nav-center">
       <a href="#" class="logo">
-        <img src="images/reymars-black-logo.jpg" alt="Reymars Logo" id="logo-img" />
+        <img src="https://i.imgur.com/6zKv0dC.png" alt="Reymars Logo" id="logo-img" />
       </a>
     </div>
     <nav class="nav-right" id="navLinks">
@@ -28,10 +422,17 @@
   </header>
 
   <main>
-    <section class="hero"></section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>REYMARS</h1>
+        <p>Fotografía Profesional</p>
+        <a href="#work" class="btn">Ver Portafolio</a>
+      </div>
+    </section>
 
     <section id="work" class="gallery-section">
       <h2>Trabajos Recientes</h2>
+      <p class="section-intro">Una selección de mis trabajos más recientes que capturan momentos únicos y emociones auténticas. Cada imagen cuenta una historia.</p>
       <div class="gallery-grid">
         <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
       </div>
@@ -39,17 +440,32 @@
 
     <section class="about-section" id="about">
       <h2>SOBRE MÍ</h2>
-      <p>Soy un Fotógrafo establecido en la ciudad de Miami, desde muy joven me he interesado por el arte en general, destacándome en las artes visuales.
-        Me gusta estudiar a mis clientes con el objetivo de llevar al máximo mi nivel fotográfico. Cada sesión es única y exclusiva en dependencia de los gustos de cada persona. 
-        Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
+      <p>Soy un fotógrafo establecido en la vibrante ciudad de Miami, donde he desarrollado mi pasión por las artes visuales desde muy joven. Mi enfoque combina técnica profesional con sensibilidad artística para crear imágenes que perduran en el tiempo.</p>
+      <p>Mi metodología se basa en un estudio minucioso de cada cliente, buscando entender su esencia para llevar cada sesión a su máximo potencial fotográfico. Cada proyecto es único, adaptándose a las preferencias y personalidad de quien está frente a mi lente.</p>
+      <p>Agradezco profundamente a quienes han confiado en mi trabajo, permitiéndome ser parte de sus historias personales y momentos más significativos. Mi compromiso es transformar instantes en arte visual que perdure por generaciones.</p>
     </section>
 
     <section class="contact-section" id="contact">
       <h2>CONTACTO</h2>
       <p>
-        <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br />
-        <a href="tel:+17865648544">+1 786-564-8544</a>
+        <a href="mailto:reymarsphotography@gmail.com">
+          <i class="fas fa-envelope"></i> reymarsphotography@gmail.com
+        </a><br />
+        <a href="tel:+17865648544">
+          <i class="fas fa-phone"></i> +1 786-564-8544
+        </a>
       </p>
+      <div class="social-links">
+        <a href="https://instagram.com/tu-usuario" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -57,6 +473,113 @@
     <p>© <span id="year"></span> REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Mostrar año actual en footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Menú hamburguesa responsive
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+        document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+      });
+
+      // Cerrar menú al clicar un link en móvil
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+
+      // Cambiar navbar al hacer scroll
+      window.addEventListener("scroll", () => {
+        document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      // Crear modal lightbox para imágenes
+      const lightbox = document.createElement('div');
+      lightbox.id = 'lightbox';
+      lightbox.style.cssText = `
+        position: fixed; top:0; left:0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.95);
+        display: flex; justify-content: center; align-items: center;
+        visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
+        z-index: 2000;
+        cursor: pointer;
+      `;
+      const img = document.createElement('img');
+      img.style.maxWidth = '90%';
+      img.style.maxHeight = '90%';
+      img.style.borderRadius = '4px';
+      img.style.boxShadow = '0 0 40px rgba(255,255,255,0.1)';
+      lightbox.appendChild(img);
+      document.body.appendChild(lightbox);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === img) {
+          lightbox.style.opacity = '0';
+          lightbox.style.visibility = 'hidden';
+        }
+      });
+
+      // Construir la galería dinámicamente
+      const galleryGrid = document.querySelector('.gallery-grid');
+      const images = [
+        "https://i.imgur.com/2a6uHVc.jpeg",
+        "https://i.imgur.com/wUD71AK.jpeg",
+        "https://i.imgur.com/FbBWqmg.jpeg",
+        "https://i.imgur.com/4lERITz.jpeg",
+        "https://i.imgur.com/TQtf2S5.jpeg",
+        "https://i.imgur.com/FP5xOxH.jpeg",
+        "https://i.imgur.com/X6pTVNx.jpeg",
+        "https://i.imgur.com/fTUAz2K.jpeg",
+        "https://i.imgur.com/8fkn88s.jpeg",
+        "https://i.imgur.com/HmMPhol.jpeg",
+        "https://i.imgur.com/2KcEGmI.jpeg",
+        "https://i.imgur.com/5XVTCgT.jpeg",
+        "https://i.imgur.com/x1aFy64.jpeg",
+        "https://i.imgur.com/ALnvgCM.jpeg",
+        "https://i.imgur.com/f3HH7uL.jpeg",
+        "https://i.imgur.com/QDwXrI8.jpeg",
+        "https://i.imgur.com/rG8Jd5L.jpeg",
+        "https://i.imgur.com/3YQ4AAO.jpeg",
+        "https://i.imgur.com/yVqGlqd.jpeg",
+        "https://i.imgur.com/3kwnRRo.jpeg",
+        "https://i.imgur.com/gkiolcI.jpeg",
+        "https://i.imgur.com/Mr1D5gq.jpeg",
+        "https://i.imgur.com/jGaXbKY.jpeg",
+        "https://i.imgur.com/JhKjtZv.jpeg",
+        "https://i.imgur.com/VNg8XRe.jpeg",
+        "https://i.imgur.com/7gIn9o2.jpeg"
+      ];
+
+      images.forEach(imgUrl => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+
+        const imgElement = document.createElement('img');
+        imgElement.src = imgUrl;
+        imgElement.alt = "Trabajo de Reymars Fotografía";
+
+        galleryItem.appendChild(imgElement);
+        galleryGrid.appendChild(galleryItem);
+
+        // Agregar evento para abrir lightbox
+        imgElement.addEventListener('click', () => {
+          img.src = imgUrl;
+          lightbox.style.visibility = 'visible';
+          lightbox.style.opacity = '1';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
