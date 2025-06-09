@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Año en el footer
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Menú hamburguesa
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("navLinks");
 
@@ -9,10 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active");
   });
 
+  // Navbar con scroll
   window.addEventListener("scroll", () => {
     document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
   });
 
+  // Galería de imágenes
   const galleryContainer = document.getElementById("gallery-container");
   const loadMoreBtn = document.getElementById("loadMore");
   let currentPage = 0;
@@ -29,12 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://i.imgur.com/fTUAz2K.jpeg",
     "https://i.imgur.com/8fkn88s.jpeg",
     "https://i.imgur.com/HmMPhol.jpeg"
-    // Agrega más si lo deseas
   ];
 
   function loadImages() {
     const start = currentPage * imagesPerPage;
-    const end = start + imagesPerPage;
+    const end = Math.min(start + imagesPerPage, imageUrls.length);
     const imagesToLoad = imageUrls.slice(start, end);
 
     imagesToLoad.forEach((url, index) => {
@@ -43,12 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const img = document.createElement("img");
       img.src = url;
-      img.loading = "lazy";
-      img.decoding = "async";
       img.alt = `Foto ${start + index + 1}`;
+      img.decoding = "async";
+      // Evita lazy loading si da problemas
+      // img.loading = "lazy"; // puedes reactivarlo si todo va bien
 
-      img.onload = () => img.classList.add("loaded");
-      img.onerror = () => (img.src = "fallback.jpg");
+      img.onerror = () => {
+        img.src = "https://via.placeholder.com/600x800?text=Imagen+no+disponible";
+      };
 
       img.addEventListener("click", () => openLightbox(url));
       item.appendChild(img);
@@ -61,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Lightbox
   function openLightbox(url) {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -71,7 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+    lightbox.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "auto";
   }
 
@@ -83,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeLightbox();
   });
 
+  // Carga inicial
   loadImages();
   loadMoreBtn.addEventListener("click", loadImages);
 });
