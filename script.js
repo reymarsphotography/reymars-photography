@@ -28,32 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
   });
 
-  // Crear modal lightbox para imágenes
-  const lightbox = document.createElement('div');
-  lightbox.id = 'lightbox';
-  lightbox.style.cssText = `
-    position: fixed; top:0; left:0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
-    display: flex; justify-content: center; align-items: center;
-    visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
-    z-index: 2000;
-    cursor: pointer;
-  `;
-  const img = document.createElement('img');
-  img.style.maxWidth = '90%';
-  img.style.maxHeight = '90%';
-  img.style.borderRadius = '4px';
-  img.style.boxShadow = '0 0 40px rgba(255,255,255,0.1)';
-  lightbox.appendChild(img);
-  document.body.appendChild(lightbox);
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox || e.target === img) {
-      lightbox.style.opacity = '0';
-      lightbox.style.visibility = 'hidden';
-    }
-  });
-
   // Construir la galería dinámicamente
   const galleryGrid = document.querySelector('.gallery-grid');
   const images = [
@@ -66,23 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://i.imgur.com/X6pTVNx.jpeg",
     "https://i.imgur.com/fTUAz2K.jpeg",
     "https://i.imgur.com/8fkn88s.jpeg",
-    "https://i.imgur.com/HmMPhol.jpeg",
-    "https://i.imgur.com/2KcEGmI.jpeg",
-    "https://i.imgur.com/5XVTCgT.jpeg",
-    "https://i.imgur.com/x1aFy64.jpeg",
-    "https://i.imgur.com/ALnvgCM.jpeg",
-    "https://i.imgur.com/f3HH7uL.jpeg",
-    "https://i.imgur.com/QDwXrI8.jpeg",
-    "https://i.imgur.com/rG8Jd5L.jpeg",
-    "https://i.imgur.com/3YQ4AAO.jpeg",
-    "https://i.imgur.com/yVqGlqd.jpeg",
-    "https://i.imgur.com/3kwnRRo.jpeg",
-    "https://i.imgur.com/gkiolcI.jpeg",
-    "https://i.imgur.com/Mr1D5gq.jpeg",
-    "https://i.imgur.com/jGaXbKY.jpeg",
-    "https://i.imgur.com/JhKjtZv.jpeg",
-    "https://i.imgur.com/VNg8XRe.jpeg",
-    "https://i.imgur.com/7gIn9o2.jpeg"
+    "https://i.imgur.com/HmMPhol.jpeg"
   ];
 
   images.forEach(imgUrl => {
@@ -95,12 +53,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     galleryItem.appendChild(imgElement);
     galleryGrid.appendChild(galleryItem);
-
-    // Agregar evento para abrir lightbox
-    imgElement.addEventListener('click', () => {
-      img.src = imgUrl;
-      lightbox.style.visibility = 'visible';
-      lightbox.style.opacity = '1';
-    });
   });
 });
