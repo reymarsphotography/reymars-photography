@@ -26,10 +26,18 @@ body {
   z-index: 999;
 }
 
+/* Ajuste para el logo y su contenedor */
 .logo {
-  /* Quitamos estilos de texto, ahora contiene imagen */
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  max-width: 200px; /* Limita ancho máximo */
+}
+
+#logo-img {
+  height: 60px;      /* Altura fija */
+  max-width: 100%;   /* Que no se salga del contenedor */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .nav-right a {
@@ -143,11 +151,4 @@ body {
   .nav-right.active {
     display: flex;
   }
-}
-
-/* Estilo para el logo */
-#logo-img {
-  height: 60px; /* Ajusta según prefieras */
-  display: block;
-  margin: 0 auto;
 }
