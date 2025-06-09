@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Mostrar año actual en footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Menú hamburguesa responsive
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("navLinks");
 
@@ -10,107 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
   });
 
-  window.addEventListener("scroll", () => {
-    document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
-  });
-
-  const galleryContainer = document.getElementById("gallery-container");
-  const loadMoreBtn = document.getElementById("loadMore");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeBtn = document.querySelector(".close");
-
-  let currentPage = 0;
-  const imagesPerPage = 6;
-
-  const imageUrls = [
-    "https://i.imgur.com/2a6uHVc.jpeg",
-    "https://i.imgur.com/FbBWqmg.jpeg",
-    "https://i.imgur.com/4lERITz.jpeg",
-    "https://i.imgur.com/FP5xOxH.jpeg",
-    "https://i.imgur.com/fTUAz2K.jpeg",
-    "https://i.imgur.com/HmMPhol.jpeg",
-
-    "https://i.imgur.com/wUD71AK.jpeg",
-    "https://i.imgur.com/X6pTVNx.jpeg",
-    "https://i.imgur.com/TQtf2S5.jpeg",
-    "https://i.imgur.com/8fkn88s.jpeg",
-    "https://i.imgur.com/2KcEGmI.jpeg",
-    "https://i.imgur.com/x1aFy64.jpeg",
-
-    "https://i.imgur.com/5XVTCgT.jpeg",
-    "https://i.imgur.com/ALnvgCM.jpeg",
-    "https://i.imgur.com/f3HH7uL.jpeg",
-    "https://i.imgur.com/QDwXrI8.jpeg",
-    "https://i.imgur.com/3YQ4AAO.jpeg",
-    "https://i.imgur.com/yVqGlqd.jpeg",
-
-    "https://i.imgur.com/rG8Jd5L.jpeg",
-    "https://i.imgur.com/3kwnRRo.jpeg",
-    "https://i.imgur.com/gkiolcI.jpeg",
-    "https://i.imgur.com/Mr1D5gq.jpeg",
-    "https://i.imgur.com/jGaXbKY.jpeg",
-    "https://i.imgur.com/JhKjtZv.jpeg",
-
-    "https://i.imgur.com/VNg8XRe.jpeg",
-    "https://i.imgur.com/7gIn9o2.jpeg"
-  ];
-
-  function loadImages() {
-    const start = currentPage * imagesPerPage;
-    const end = Math.min(start + imagesPerPage, imageUrls.length);
-    const imagesToLoad = imageUrls.slice(start, end);
-
-    imagesToLoad.forEach((url, index) => {
-      const item = document.createElement("div");
-      item.className = "gallery-item";
-
-      const img = new Image();
-      img.src = url;
-      img.alt = `Foto ${start + index + 1}`;
-      img.decoding = "async";
-      img.loading = "lazy";
-
-      img.onerror = () => {
-        img.src = "https://via.placeholder.com/600x800?text=Imagen+no+disponible";
-      };
-
-      img.addEventListener("click", () => openLightbox(url));
-      item.appendChild(img);
-      galleryContainer.appendChild(item);
-    });
-
-    currentPage++;
-    if (currentPage * imagesPerPage >= imageUrls.length) {
-      loadMoreBtn.style.display = "none";
-    }
-  }
-
-  function openLightbox(url) {
-    lightboxImg.src = url;
-    lightbox.style.display = "flex";
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.style.display = "none";
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "auto";
-  }
-
-  closeBtn.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
-  });
-
-  loadImages();
-  loadMoreBtn.addEventListener("click", loadImages);
-
+  // Cerrar menú al clicar un link en móvil
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
       if (window.innerWidth <= 768) {
@@ -118,6 +20,43 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.classList.remove("active");
         document.body.style.overflow = "auto";
       }
+    });
+  });
+
+  // Cambiar navbar al hacer scroll
+  window.addEventListener("scroll", () => {
+    document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+  });
+
+  // Crear modal lightbox para imágenes
+  const lightbox = document.createElement('div');
+  lightbox.id = 'lightbox';
+  lightbox.style.cssText = `
+    position: fixed; top:0; left:0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: center;
+    visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
+    z-index: 2000;
+    cursor: pointer;
+  `;
+  const img = document.createElement('img');
+  img.style.maxWidth = '90%';
+  img.style.maxHeight = '90%';
+  img.style.borderRadius = '12px';
+  lightbox.appendChild(img);
+  document.body.appendChild(lightbox);
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.opacity = '0';
+    lightbox.style.visibility = 'hidden';
+  });
+
+  // Abrir lightbox al clicar en una imagen
+  document.querySelectorAll('.gallery-grid img').forEach(image => {
+    image.addEventListener('click', () => {
+      img.src = image.src;
+      lightbox.style.visibility = 'visible';
+      lightbox.style.opacity = '1';
     });
   });
 });
