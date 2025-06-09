@@ -27,10 +27,9 @@ body {
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--text-dark);
+  /* Quitamos estilos de texto, ahora contiene imagen */
+  display: flex;
+  align-items: center;
 }
 
 .nav-right a {
@@ -144,4 +143,11 @@ body {
   .nav-right.active {
     display: flex;
   }
+}
+
+/* Estilo para el logo */
+#logo-img {
+  height: 60px; /* Ajusta según prefieras */
+  display: block;
+  margin: 0 auto;
 }
