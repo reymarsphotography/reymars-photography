@@ -1,155 +1,51 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Efecto de navbar al hacer scroll
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REYMARS | Fotografía Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="#" class="logo">REYMARS</a>
+        </div>
+        <div class="nav-right">
+            <a href="#work">TRABAJOS</a>
+            <a href="#about">SOBRE MÍ</a>
+            <a href="#contact">CONTACTO</a>
+            <a href="#" class="social-icon">IG</a>
+        </div>
+    </div>
 
-    // Configuración de imágenes con orden personalizado
-    const imageData = [
-        // Fila 1
-        { 
-            src: "images/Daniela Fuente izquierda.jpg", 
-            alt: "Daniela - Interacción con agua",
-            position: "left"
-        },
-        { 
-            src: "images/Marilia Low key mirando a la izquierda.jpg", 
-            alt: "Marilia - Retrato atmosférico",
-            position: "center"
-        },
-        { 
-            src: "images/Steven Low key mirando a la izquierda.jpg", 
-            alt: "Steven - Dramatismo en claroscuro",
-            position: "right"
-        },
-        
-        // Fila 2
-        { 
-            src: "images/Dario mirando a la derecha.jpg", 
-            alt: "Dario - Mirada intensa a cámara",
-            position: "left"
-        },
-        { 
-            src: "images/Mari jirasoles centro.jpg", 
-            alt: "Mari - Girasoles",
-            position: "center"
-        },
-        { 
-            src: "images/Lazaro flores rojas mirando a la derecha.jpg", 
-            alt: "Lázaro - Flores rojas (contraste)",
-            position: "right"
-        },
-        
-        // Fila 3
-        { 
-            src: "images/Marinalva ventana mirando a la izquierda.jpg", 
-            alt: "Marinalva - Luz de ventana",
-            position: "left"
-        },
-        { 
-            src: "images/jony y stef hig key centro.jpg", 
-            alt: "Jony y Stef - Amor en alta clave",
-            position: "center"
-        },
-        { 
-            src: "images/Familia yenki centro.jpg", 
-            alt: "Familia Yenki - Unión",
-            position: "right"
-        },
-        
-        // Fila 4
-        { 
-            src: "images/Anay Feliz mirando al frente izquierdo.jpg", 
-            alt: "Anay - Alegría espontánea",
-            position: "left"
-        },
-        { 
-            src: "images/Steven leyendo centro.jpg", 
-            alt: "Steven - Concentración",
-            position: "center"
-        },
-        { 
-            src: "images/Lazaro smoking centro.jpg", 
-            alt: "Lázaro - Estilo icónico",
-            position: "right"
-        },
-        
-        // Fila 5
-        { 
-            src: "images/Marinalva princesa mirando a la derecha.jpg", 
-            alt: "Marinalva - Elegancia real",
-            position: "left"
-        },
-        { 
-            src: "images/Daimer y Marilia mirandose uno al otro en el centro.jpg", 
-            alt: "Daimer y Marilia - Conexión de pareja",
-            position: "center"
-        },
-        { 
-            src: "images/Daniela sentada mirando a la derecha.jpg", 
-            alt: "Daniela - Pose natural",
-            position: "right"
-        },
-        
-        // Fila 6
-        { 
-            src: "images/Marinalva Princesa close up centro.jpg", 
-            alt: "Marinalva - Detalle facial",
-            position: "left"
-        },
-        { 
-            src: "images/Mari rosa mirando centro abajo.jpg", 
-            alt: "Mari - Tonos rosados",
-            position: "center"
-        },
-        { 
-            src: "images/Sami bussiness lado derecho.jpg", 
-            alt: "Sami - Actitud profesional",
-            position: "right"
-        }
-    ];
+    <div class="hero">
+        <div class="hero-content">
+            <h1>REYMARS</h1>
+            <p>Fotografía Profesional</p>
+        </div>
+    </div>
 
-    // Cargar imágenes en la galería
-    const galleryContainer = document.getElementById('gallery-container');
-    
-    imageData.forEach(image => {
-        const galleryItem = document.createElement('div');
-        galleryItem.className = 'gallery-item';
-        
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = image.alt;
-        img.loading = "lazy";
-        
-        galleryItem.appendChild(img);
-        galleryContainer.appendChild(galleryItem);
-    });
+    <div class="gallery-section" id="work">
+        <h2>TRABAJOS RECIENTES</h2>
+        <div class="gallery-grid" id="gallery-container"></div>
+    </div>
 
-    // Scroll suave en navegación
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    <div class="about-section" id="about">
+        <h2>SOBRE MÍ</h2>
+        <p>Soy un fotógrafo establecido en la ciudad de Miami. Desde muy joven me he interesado por el arte en general, destacándome en las artes visuales. Me gusta estudiar a mis clientes con el objetivo de llevar al máximo mi nivel fotográfico. Cada sesión es única y exclusiva en dependencia de los gustos de cada persona.</p>
+        <p>Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
+    </div>
 
-    // Precarga de imágenes para mejor performance
-    function preloadImages() {
-        imageData.forEach(image => {
-            const img = new Image();
-            img.src = image.src;
-        });
-    }
-    preloadImages();
-});
+    <div class="contact-section" id="contact">
+        <h2>CONTACTO</h2>
+        <p>reymarsphotography@gmail.com<br>+1 786-564-8544</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2023 REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
