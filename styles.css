@@ -143,6 +143,7 @@ body {
     transform: scale(1.05);
 }
 
+/* Clase para imagen destacada que ocupa dos columnas */
 .gallery-item.destacado {
     grid-column: span 2;
 }
