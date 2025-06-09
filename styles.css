@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
   color: var(--text-dark);
 }
@@ -28,11 +28,11 @@ body {
 
 .nav-left .logo {
   display: inline-block;
-  max-width: 180px;
+  max-width: 200px;
 }
 
 #logo-img {
-  height: 55px;
+  height: 60px;
   max-width: 100%;
   display: block;
   object-fit: contain;
@@ -43,11 +43,6 @@ body {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-right a:hover {
-  color: var(--primary-color);
 }
 
 .hamburger {
@@ -56,7 +51,6 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
 }
 
 .hamburger span {
@@ -65,18 +59,17 @@ body {
   background: var(--text-dark);
   margin: 4px 0;
   display: block;
-  border-radius: 2px;
 }
 
 .hero {
-  padding: 180px 40px 80px;
+  padding: 200px 40px 80px;
   text-align: center;
   background: #000;
   color: white;
 }
 
 .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   margin: 0;
   font-weight: 900;
   letter-spacing: 4px;
@@ -86,68 +79,27 @@ body {
   padding: 80px 40px;
   background: #f7f7f7;
   text-align: center;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: 10px; /* base for masonry effect */
   gap: 20px;
 }
 
 .gallery-grid img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   cursor: pointer;
-  object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  aspect-ratio: 4 / 3;
-}
-
-/* Masonry effect using grid-row-end */
-.gallery-grid img {
-  grid-row-end: span 30; /* Default span */
-}
-
-.gallery-grid img:nth-child(5n) { grid-row-end: span 35; }
-.gallery-grid img:nth-child(3n) { grid-row-end: span 32; }
-.gallery-grid img:nth-child(7n) { grid-row-end: span 28; }
-
-.gallery-grid img:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-/* Lightbox Styles */
-#lightbox {
-  position: fixed;
-  top:0; left:0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 2000;
-  cursor: pointer;
-  padding: 20px;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
   object-fit: contain;
 }
 
-#lightbox.visible {
-  visibility: visible;
-  opacity: 1;
+.gallery-grid img:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .about-section,
@@ -169,7 +121,6 @@ body {
 .contact-section {
   background: var(--primary-color);
   color: var(--text-light);
-  border-radius: 8px;
 }
 
 .footer {
