@@ -1,40 +1,41 @@
 // Galería de imágenes
 const gallery = document.querySelector('.gallery');
-const imageUrls = [
-    'https://i.imgur.com/wUD71AK.jpeg',
-    'https://i.imgur.com/FbBWqmg.jpeg',
-    'https://i.imgur.com/TQtf2S5.jpeg',
-    'https://i.imgur.com/FP5xOxH.jpeg',
-    'https://i.imgur.com/X6pTVNx.jpeg',
-    'https://i.imgur.com/fTUAz2K.jpeg',
-    'https://i.imgur.com/8fkn88s.jpeg',
-    'https://i.imgur.com/HmMPhol.jpeg',
-    'https://i.imgur.com/2KcEGmI.jpeg',
-    'https://i.imgur.com/5XVTCgT.jpeg',
-    'https://i.imgur.com/x1aFy64.jpeg',
-    'https://i.imgur.com/ALnvgCM.jpeg',
-    'https://i.imgur.com/f3HH7uL.jpeg',
-    'https://i.imgur.com/QDwXrI8.jpeg',
-    'https://i.imgur.com/rG8Jd5L.jpeg',
-    'https://i.imgur.com/3YQ4AAO.jpeg',
-    'https://i.imgur.com/yVqGlqd.jpeg',
-    'https://i.imgur.com/3kwnRRo.jpeg',
-    'https://i.imgur.com/gkiolcI.jpeg',
-    'https://i.imgur.com/Mr1D5gq.jpeg',
-    'https://i.imgur.com/jGaXbKY.jpeg',
-    'https://i.imgur.com/JhKjtZv.jpeg',
-    'https://i.imgur.com/VNg8XRe.jpeg',
-    'https://i.imgur.com/7gIn9o2.jpeg'
+const imageFiles = [
+    'Daimer y Marilia mirandose uno al otro en el centro.webp',
+    'Marilia Low key mirando a la izquierda.webp',
+    'Dario mirando a la derecha.webp',
+    'Daniela sentada mirando a la derecha.webp',
+    'Marinalva ventana mirando a la izquierda.webp',
+    'Daniela Fuente izquierda.webp',
+    'Marinalva princesa mirando a la derecha.webp',
+    'Marinalva Princesa close up centro.webp',
+    'Marinalva azul mirando a la izquierda.webp',
+    'Anay Feliz mirando al frente izquierdo.webp',
+    'Mari rosa mirando centro abajo.webp',
+    'Steven feliz centro.webp',
+    'Steven leyendo centro.webp',
+    'Mari jirasoles centro.webp',
+    'Nino reloj del lado izquierdo.webp',
+    'jony y stef hig key centro.webp',
+    'Embarazo y Juli del lado izquierdo.webp',
+    'Embarazo arriba lado derecho.webp',
+    'Juli piano lado derecho.webp',
+    'Steven Low key mirando a la izquierda.webp',
+    'Lazaro flores rojas mirando a la derecha.webp',
+    'Sami bussiness lado derecho.webp',
+    'Lazaro smoking centro.webp',
+    'Familia yenki centro.webp'
 ];
 
 // Cargar imágenes en la galería
-imageUrls.forEach(url => {
+imageFiles.forEach(file => {
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery-item';
     
     const img = document.createElement('img');
-    img.src = url;
+    img.src = `images/${file}`;
     img.alt = 'Trabajo fotográfico de Reymars';
+    img.loading = 'lazy'; // Optimización de carga
     
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
@@ -95,9 +96,7 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Aquí iría la lógica de envío del formulario
-    // Por ahora solo mostraremos un mensaje de éxito
-    
+    // Simulación de envío exitoso
     alert('¡Gracias por tu mensaje! Te contactaré lo antes posible.');
     contactForm.reset();
 });
@@ -116,6 +115,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
+            
+            // Cerrar menú móvil si está abierto
+            if (navUl.style.display === 'flex') {
+                navUl.style.display = 'none';
+            }
         }
     });
 });
@@ -128,8 +132,35 @@ mobileMenuBtn.addEventListener('click', function() {
     navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
 });
 
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            navUl.style.display = 'none';
+        }
+    });
+});
+
 // Sticky Header
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 });
+
+// Lazy loading para imágenes
+if ('loading' in HTMLImageElement.prototype) {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+    });
+} else {
+    // Fallback para navegadores que no soportan lazy loading
+    const lazyScript = document.createElement('script');
+    lazyScript.src = 'https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js';
+    document.body.appendChild(lazyScript);
+    
+    lazyScript.onload = () => {
+        const observer = lozad();
+        observer.observe();
+    };
+}
