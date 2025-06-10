@@ -11,40 +11,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Configuración de imágenes con orden personalizado
     const imageData = [
-        { src: "images/Daniela Fuente izquierda.webp", alt: "Daniela - Interacción con agua", position: "left" },
-        { src: "images/Marilia Low key mirando a la izquierda.webp", alt: "Marilia - Retrato atmosférico", position: "center" },
-        { src: "images/Steven Low key mirando a la izquierda.webp", alt: "Steven - Dramatismo en claroscuro", position: "right" },
-
-        { src: "images/Dario mirando a la derecha.webp", alt: "Dario - Mirada intensa a cámara", position: "left" },
-        { src: "images/Mari jirasoles centro.webp", alt: "Mari - Girasoles", position: "center" },
-        { src: "images/Lazaro flores rojas mirando a la derecha.webp", alt: "Lázaro - Flores rojas (contraste)", position: "right" },
-
-        { src: "images/Marinalva ventana mirando a la izquierda.webp", alt: "Marinalva - Luz de ventana", position: "left" },
-        { src: "images/jony y stef hig key centro.webp", alt: "Jony y Stef - Amor en alta clave", position: "center" },
-        { src: "images/Familia yenki centro.webp", alt: "Familia Yenki - Unión", position: "right" },
-
-        { src: "images/Anay Feliz mirando al frente izquierdo.webp", alt: "Anay - Alegría espontánea", position: "left" },
-        { src: "images/Steven leyendo centro.webp", alt: "Steven - Concentración", position: "center" },
-        { src: "images/Lazaro smoking centro.webp", alt: "Lázaro - Estilo icónico", position: "right" },
-
-        { src: "images/Marinalva princesa mirando a la derecha.webp", alt: "Marinalva - Elegancia real", position: "left" },
-        { src: "images/Daimer y Marilia mirandose uno al otro en el centro.webp", alt: "Daimer y Marilia - Conexión de pareja", position: "center" },
-        { src: "images/Daniela sentada mirando a la derecha.webp", alt: "Daniela - Pose natural", position: "right" },
-
-        { src: "images/Marinalva Princesa close up centro.webp", alt: "Marinalva - Detalle facial", position: "left" },
-        { src: "images/Mari rosa mirando centro abajo.webp", alt: "Mari - Tonos rosados", position: "center" },
-        { src: "images/Sami bussiness lado derecho.webp", alt: "Sami - Actitud profesional", position: "right" }
+        { src: "images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp", alt: "Daimer y Marilia - Conexión de pareja", position: "center" },
+        { src: "images/Marilia_Low_key_mirando_a_la_izquierda.webp", alt: "Marilia - Retrato atmosférico", position: "center" },
+        { src: "images/Dario_mirando_a_la_derecha.webp", alt: "Dario - Mirada intensa a cámara", position: "left" },
+        { src: "images/Daniela_sentada_mirando_a_la_derecha.webp", alt: "Daniela - Pose natural", position: "right" },
+        { src: "images/Marinalva_ventana_mirando_a_la_izquierda.webp", alt: "Marinalva - Luz de ventana", position: "left" },
+        { src: "images/Daniela_Fuente_izquierda.webp", alt: "Daniela - Interacción con agua", position: "left" },
+        { src: "images/Marinalva_princesa_mirando_a_la_derecha.webp", alt: "Marinalva - Elegancia real", position: "left" },
+        { src: "images/Marinalva_Princesa_close_up_centro.webp", alt: "Marinalva - Detalle facial", position: "left" },
+        { src: "images/Marinalva_azul_mirando_a_la_izquierda.webp", alt: "Marinalva - Estilo clásico", position: "left" },
+        { src: "images/Anay_Feliz_mirando_al_frente_izquierdo.webp", alt: "Anay - Alegría espontánea", position: "left" },
+        { src: "images/Mari_rosa_mirando_centro_abajo.webp", alt: "Mari - Tonos rosados", position: "center" },
+        { src: "images/Steven_feliz_centro.webp", alt: "Steven - Alegría", position: "center" },
+        { src: "images/Steven_leyendo_centro.webp", alt: "Steven - Concentración", position: "center" },
+        { src: "images/Mari_jirasoles_centro.webp", alt: "Mari - Girasoles", position: "center" },
+        { src: "images/Nino_reloj_del_lado_izquierdo.webp", alt: "Niño - Juego creativo", position: "left" },
+        { src: "images/jony_y_stef_hig_key_centro.webp", alt: "Jony y Stef - Amor en alta clave", position: "center" },
+        { src: "images/Embarazo_y_Juli_del_lado_izquierdo.webp", alt: "Embarazo - Momento familiar", position: "center" },
+        { src: "images/Embarazo_arriba_lado_derecho.webp", alt: "Embarazo - Belleza natural", position: "right" },
+        { src: "images/Juli_piano_lado_derecho.webp", alt: "Juli - Talento musical", position: "right" },
+        { src: "images/Steven_Low_key_mirando_a_la_izquierda.webp", alt: "Steven - Dramatismo en claroscuro", position: "center" },
+        { src: "images/Lazaro_flores_rojas_mirando_a_la_derecha.webp", alt: "Lázaro - Flores rojas (contraste)", position: "right" },
+        { src: "images/Sami_bussiness_lado_derecho.webp", alt: "Sami - Actitud profesional", position: "right" },
+        { src: "images/Lazaro_smoking_centro.webp", alt: "Lázaro - Estilo icónico", position: "right" },
+        { src: "images/Familia_yenki_centro.webp", alt: "Familia Yenki - Unión", position: "right" },
+        { src: "images/Marinalva_acostada.webp", alt: "Marinalva - Relajada", position: "center" },
+        { src: "images/Rey_y_Mari_del_lado_derecho.webp", alt: "Rey y Mari - Complicidad", position: "right" }
     ];
 
-    const galleryContainer = document.querySelector('.gallery-grid');
-    imageData.forEach((image) => {
+    const galleryContainer = document.getElementById('gallery-grid');
+    imageData.forEach((image, index) => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
-
-        // Ajuste especial solo para la imagen destacada
-        if (image.src === "images/Marinalva princesa mirando a la derecha.webp") {
+        
+        // Añadir clase destacado a una imagen específica
+        if (image.src === "images/Marinalva_princesa_mirando_a_la_derecha.webp" && index === 6) {
             galleryItem.classList.add('destacado');
-            galleryItem.style.height = '500px';
         }
 
         const img = document.createElement('img');
@@ -60,7 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -90,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formStatus.textContent = 'Enviando mensaje...';
             formStatus.style.color = '#fff';
 
-            fetch('https://formspree.io/f/xyzjedrz', {
+            fetch('https://formspree.io/f/xyzjedrz',  {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
