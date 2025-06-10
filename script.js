@@ -157,4 +157,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     preloadImages();
+
+    // Manejo del formulario de contacto
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+
+            // Mostrar mensaje de "enviando"
+            formStatus.textContent = 'Enviando mensaje...';
+            formStatus.style.color = '#fff';
+
+            fetch('https://formspree.io/f/xyzjedrz', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.textContent = '¡Mensaje enviado con éxito!';
+                    formStatus.style.color = '#4CAF50';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Error al enviar el mensaje');
+                }
+            })
+            .catch(error => {
+                formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+                formStatus.style.color = '#f44336';
+            });
+        });
+    }
 });
