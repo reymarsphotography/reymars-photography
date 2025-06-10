@@ -203,7 +203,56 @@ body {
     margin: 15px auto;
 }
 
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-section textarea {
+    height: 150px;
+}
+
+.contact-section button {
+    background: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #ddd;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: #ccc;
+}
+
+#form-status {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 20px;
+}
+
 .contact-section p {
+    margin-top: 20px;
     line-height: 1.8;
     letter-spacing: 1px;
 }
