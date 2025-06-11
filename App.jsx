@@ -280,7 +280,9 @@ const App = () => {
       
       {/* Lightbox */}
       {lightboxVisible && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90" onClick={closeLightbox}>
+        <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4" // <-- LÍNEA CORREGIDA (añadido p-4 para dar espacio)
+            onClick={closeLightbox}>
           <button 
             className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
             onClick={closeLightbox}
@@ -292,7 +294,7 @@ const App = () => {
           <img 
             src={`./images/${selectedImage}`} 
             alt="Lightbox view"
-            className="max-w-full max-h-full object-contain animate-fadeIn"
+            className="max-w-full max-h-screen object-contain animate-fadeIn" // <-- LÍNEA CORREGIDA (cambiado max-h-full por max-h-screen)
             onClick={(e) => e.stopPropagation()}
           />
         </div>
