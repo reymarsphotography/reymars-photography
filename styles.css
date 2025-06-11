@@ -94,12 +94,16 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 2rem;
+    background-image: url('images/Marinalva_acostada.webp');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: cover;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 /* Galería */
