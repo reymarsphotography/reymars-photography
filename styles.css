@@ -1,13 +1,18 @@
-/* === Estilos Generales === */
-body {
+/* RESET Y ESTILOS BASE */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
     background-color: #111;
     color: #fff;
     line-height: 1.6;
 }
 
-/* === Navbar === */
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -19,7 +24,6 @@ body {
     gap: 25px;
     z-index: 1000;
     backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar a {
@@ -30,15 +34,11 @@ body {
     transition: color 0.3s;
 }
 
-.navbar a:hover {
-    color: #4CAF50;
-}
-
-/* === Galería (Corrección Principal) === */
+/* GALERÍA CORREGIDA */
 .gallery-container {
     padding: 100px 20px 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     max-width: 1400px;
     margin: 0 auto;
@@ -47,14 +47,9 @@ body {
 .gallery-item {
     border-radius: 10px;
     overflow: hidden;
-    height: 320px; /* Altura fija controlada */
+    height: 300px; /* ALTURA FIJA */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
 }
 
 .gallery-item img {
@@ -65,23 +60,23 @@ body {
     transition: transform 0.5s;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Ítem destacado */
+/* ÍTEM DESTACADO */
 .gallery-item.destacado {
-    height: 660px; /* 320px * 2 + 20px gap */
+    height: 620px; /* 300px * 2 + 20px gap */
     grid-column: span 2;
 }
 
-/* Overlay descriptivo */
+/* EFECTOS HOVER */
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
 .gallery-item .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     padding: 20px;
     color: white;
     opacity: 0;
@@ -92,7 +87,7 @@ body {
     opacity: 1;
 }
 
-/* === Formulario === */
+/* FORMULARIO */
 .contact-section {
     padding: 60px 20px;
     background-color: #222;
@@ -107,62 +102,28 @@ body {
     gap: 15px;
 }
 
-#contact-form input,
-#contact-form textarea {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: white;
-    font-size: 16px;
-}
-
-#contact-form button {
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-#contact-form button:hover {
-    background-color: #45a049;
-}
-
-/* === Responsive === */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .gallery-item {
-        height: 280px;
+        height: 250px;
     }
-    
     .gallery-item.destacado {
-        height: 580px;
+        height: 520px;
     }
 }
 
 @media (max-width: 768px) {
     .gallery-item.destacado {
         grid-column: span 1;
-        height: 350px;
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .gallery-container {
         grid-template-columns: 1fr;
-        padding: 90px 15px 30px;
     }
-    
-    .gallery-item,
-    .gallery-item.destacado {
-        height: 300px;
-    }
-    
-    .navbar {
-        gap: 15px;
-        padding: 12px 0;
+    .gallery-item {
+        height: 280px;
     }
 }
