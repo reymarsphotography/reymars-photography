@@ -72,6 +72,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -94,8 +95,8 @@ body {
 }
 
 .hero h1 {
-    font-size: 12rem; /* Texto gigante */
-    margin-bottom: 1rem;
+    font-size: 14rem; /* Aún más grande */
+    margin-bottom: 0;
     background-image: url('images/Marinalva_acostada.webp');
     background-clip: text;
     -webkit-background-clip: text;
@@ -105,157 +106,155 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 1;
+    white-space: nowrap;
 }
 
-.hero p {
-    font-size: 2rem;
-    margin-top: -5rem; /* Ajuste para que no esté tan separado del texto grande */
+.hero-subtitle {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Galería */
+/* Sección TRABAJOS con efecto de imagen de fondo */
 .gallery-section {
-    background-color: #f8f8f8;
-    padding: 4rem 2rem;
+    background: url('images/trabajos.jpg') center/cover no-repeat;
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .gallery-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+    font-size: 8rem;
+    margin-bottom: 2rem;
+    background-image: url('images/trabajos.jpg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-item.destacado {
-    grid-column: span 2;
-}
-
-/* Sobre Mí */
+/* Sección SOBRE MÍ con efecto de imagen de fondo */
 .about-section {
-    padding: 4rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    background: url('images/sobremi.jpg') center/cover no-repeat;
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .about-section h2 {
-    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+    font-size: 8rem;
     margin-bottom: 2rem;
+    background-image: url('images/sobremi.jpg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.about-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-}
-
-/* Contacto */
+/* Sección CONTACTO con efecto de imagen de fondo */
 .contact-section {
-    background-color: #f8f8f8;
-    padding: 4rem 2rem;
+    background: url('images/contacto.jpg') center/cover no-repeat;
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .contact-section h2 {
-    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+    font-size: 8rem;
     margin-bottom: 2rem;
-}
-
-.contact-section form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1.5rem;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-section button {
-    background-color: #000;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-section button:hover {
-    background-color: #333;
-}
-
-#form-status {
-    margin-top: 1rem;
+    background-image: url('images/contacto.jpg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
-/* Footer */
-.footer {
-    background-color: #000;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+/* Animación opcional */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 9rem;
-    }
+    .hero h1 { font-size: 9rem; }
+    .hero-subtitle { font-size: 2rem; }
 
-    .hero p {
-        font-size: 1.8rem;
-        margin-top: -4rem;
+    .gallery-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 6rem;
     }
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 6rem;
-    }
+    .hero h1 { font-size: 6rem; }
+    .hero-subtitle { font-size: 1.5rem; }
 
-    .hero p {
-        font-size: 1.5rem;
-        margin-top: -3rem;
+    .gallery-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 4rem;
     }
 }
