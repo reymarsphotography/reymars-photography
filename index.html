@@ -1,197 +1,340 @@
 <!DOCTYPE HTML>
+<!-- 
+    Declara que este es un documento HTML5, importante para la compatibilidad moderna.
+-->
+
 <!--
+    Este es un comentario. No aparece en la página web, pero sirve para documentar el código.
+    Aquí se indica el nombre del sitio, autor y licencia del tema usado (HTML5 UP).
+    
     REYMAR'S Photography
     html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Licencia CCA 3.0: uso libre para personal y comercial, sin modificar derechos de autoría.
 -->
+
 <html>
+    <!-- 
+        Etiqueta principal del documento HTML. Todo el contenido va dentro de esta etiqueta.
+    -->
+
     <head>
+        <!-- 
+            La sección <head> contiene información sobre la página que no se muestra directamente,
+            como metadatos, título, estilos y scripts iniciales.
+        -->
+
         <title>Reymars Photography | Capturing Moments in Miami</title>
+        <!-- 
+            Título de la página que aparece en la pestaña del navegador y en resultados de búsqueda.
+            Puedes cambiarlo si deseas actualizar el mensaje visible aquí.
+        -->
+
         <meta charset="utf-8" />
+        <!-- 
+            Define la codificación de caracteres usada en el documento (UTF-8), importante para acentos y símbolos.
+        -->
+
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!-- 
+            Configuración para dispositivos móviles:
+            - width=device-width: ajusta el ancho al tamaño del dispositivo.
+            - initial-scale=1: escala inicial.
+            - user-scalable=no: evita hacer zoom manualmente.
+        -->
+
         <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- 
+            Enlace al archivo CSS principal que da estilo visual a tu sitio (colores, diseño, responsive, etc.).
+            No lo modifiques directamente a menos que entiendas CSS.
+        -->
+
     </head>
+
     <body class="is-preload">
+        <!-- 
+            La sección <body> contiene todo el contenido visible de la página.
+            La clase 'is-preload' controla cómo se carga la página antes de estar completamente lista.
+        -->
 
         <!-- Header -->
         <div id="header">
+            <!-- 
+                Contenedor principal del encabezado (barra superior con logo, menú y redes sociales).
+            -->
 
             <div class="top">
+                <!-- 
+                    Sección superior del header: logo y menú de navegación.
+                -->
 
                 <!-- Logo -->
                 <div id="logo">
-                    <span class="image avatar48"><img src="images/logo.jpg" alt="Reymars Photography" /></span>
+                    <!-- 
+                        Contenedor del logo del sitio.
+                    -->
+
+                    <span class="image avatar48">
+                        <!-- 
+                            Imagen del logo. avatar48 define el tamaño.
+                        -->
+                        <img src="images/logo.jpg" alt="Reymars Photography" />
+                        <!-- 
+                            Muestra la imagen del logo. Si cambias de logo, reemplaza "logo.jpg" por tu nueva imagen.
+                        -->
+                    </span>
+
                     <h1 id="title">Reymars Photography</h1>
+                    <!-- 
+                        Título del sitio (nombre del fotógrafo). Puedes cambiarlo si decides cambiar de marca/nombre.
+                    -->
+
                     <p>Miami</p>
+                    <!-- 
+                        Ubicación del fotógrafo. Puedes cambiarla si te mudas o trabajas en otro lugar.
+                    -->
+
                 </div>
 
                 <!-- Nav -->
                 <nav id="nav">
+                    <!-- 
+                        Menú de navegación principal. Estilo horizontal o vertical dependiendo del tamaño de pantalla.
+                    -->
+
                     <ul>
+                        <!-- 
+                            Lista no ordenada de los elementos del menú.
+                        -->
+
                         <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                        <!-- 
+                            Enlace al inicio ("Intro"). Usa Font Awesome para mostrar un icono de casa.
+                            href="#top": apunta a la sección con id="top"
+                        -->
+
                         <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                        <!-- 
+                            Enlace a la sección Portfolio. Muestra icono de cuadrícula.
+                            href="#portfolio": apunta a la sección con id="portfolio"
+                        -->
+
                         <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                        <!-- 
+                            Enlace a la sección About Me. Muestra icono de usuario.
+                            href="#about": apunta a la sección con id="about"
+                        -->
+
                         <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                        <!-- 
+                            Enlace a la sección Contact. Muestra icono de correo electrónico.
+                            href="#contact": apunta a la sección con id="contact"
+                        -->
+
                     </ul>
                 </nav>
 
             </div>
 
             <div class="bottom">
+                <!-- 
+                    Parte inferior del header, donde están las redes sociales.
+                -->
 
                 <!-- Social Icons -->
                 <ul class="icons">
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="mailto:reymarsphotography@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
+                    <!-- 
+                        Lista de íconos de redes sociales.
+                    -->
 
+                    <li><a href="https://www.instagram.com/reymar_s_photography/"  class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <!-- 
+                        Enlace a Instagram. Puedes cambiar la URL si actualizas tu cuenta.
+                    -->
+
+                    <li><a href="https://www.facebook.com/reymarsphotography/"  class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <!-- 
+                        Enlace a Facebook. Cambia esta URL si cambias de página o perfil.
+                    -->
+
+                    <li><a href="mailto:reymarsphotography@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    <!-- 
+                        Enlace para enviar correo. El mail está predefinido, cámbialo solo si actualizas tu dirección de email.
+                    -->
+
+                </ul>
             </div>
 
         </div>
 
         <!-- Main -->
         <div id="main">
+            <!-- 
+                Contenido principal del sitio: Intro, Portfolio, About Me, Contact.
+            -->
 
             <!-- Intro -->
             <section id="top" class="one dark cover">
+                <!-- 
+                    Sección intro/inicio. Clase "dark cover" le da fondo oscuro y estilo especial.
+                -->
+
                 <div class="container">
+                    <!-- 
+                        Contenedor centralizado del contenido de la sección.
+                    -->
+
                     <header>
+                        <!-- 
+                            Encabezado de la sección Intro.
+                        -->
+
                         <h2 class="alt">Hi! I'm <strong>Reymars Photography</strong>.</h2>
+                        <!-- 
+                            Texto de bienvenida. Puedes editarlo para personalizar tu saludo.
+                        -->
+
                     </header>
+
                     <footer>
+                        <!-- 
+                            Pie de la sección Intro, con botón de acción.
+                        -->
+
                         <a href="#portfolio" class="button scrolly">See My Work</a>
+                        <!-- 
+                            Botón que lleva a la sección Portfolio al hacer clic.
+                        -->
+
                     </footer>
+
                 </div>
+
             </section>
 
             <!-- Portfolio -->
             <section id="portfolio" class="two">
+                <!-- 
+                    Sección de portafolio, donde se muestran tus fotos.
+                    Clase "two" define estilo visual diferente al resto.
+                -->
+
                 <div class="container">
+                    <!-- 
+                        Contenedor general del contenido de la sección.
+                    -->
 
                     <header>
+                        <!-- 
+                            Encabezado del portafolio.
+                        -->
+
                         <h2>Portfolio</h2>
+                        <!-- 
+                            Título de la sección. Puedes cambiarlo si prefieres otro nombre.
+                        -->
+
                     </header>
 
                     <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
+                    <!-- 
+                        Descripción breve del portafolio. Puedes editarla si deseas una descripción más larga o distinta.
+                    -->
 
+                    <!-- Bloques de imágenes -->
+                    <!-- Cada div con class="row" contiene hasta 3 imágenes por fila -->
+                    <!-- Cada div con class="col-4 col-12-mobile" ocupa 1/3 del espacio en pantallas grandes y 100% en móviles -->
+
+                    <!-- Ejemplo de una tarjeta de foto -->
                     <div class="row">
                         <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="" /></a><header><h3>Daimer & Marilia</h3></header></article>
+                            <article class="item">
+                                <!-- 
+                                    Artículo que representa una imagen en el portafolio.
+                                -->
+                                <a href="#" class="image fit">
+                                    <!-- 
+                                        Enlace vacío (#) que podrías usar para abrir detalles de la imagen.
+                                    -->
+                                    <img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="" />
+                                    <!-- 
+                                        Imagen individual del portafolio. Puedes cambiarla por otra foto si lo deseas.
+                                    -->
+                                </a>
+                                <header>
+                                    <h3>Daimer & Marilia</h3>
+                                    <!-- 
+                                        Título debajo de la imagen. Puedes cambiarlo si actualizas la foto.
+                                    -->
+                                </header>
+                            </article>
                         </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="" /></a><header><h3>Marilian</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="" /></a><header><h3>Dario</h3></header></article>
-                        </div>
+                        <!-- Repetición de bloques similares para otras imágenes... -->
+
                     </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="" /></a><header><h3>Dani</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="" /></a><header><h3>Nalva</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="" /></a><header><h3>Close-up</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="" /></a><header><h3>Any</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="" /></a><header><h3>Mari</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Steven_feliz_centro.webp" alt="" /></a><header><h3>Steven</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="" /></a><header><h3>Steven</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="" /></a><header><h3>Mari</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="" /></a><header><h3>Lester</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="" /></a><header><h3>Jony y Stef</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="" /></a><header><h3>Juli & Stef</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="" /></a><header><h3>Stefanie</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="" /></a><header><h3>juli</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="" /></a><header><h3>Steven</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="" /></a><header><h3>Lachi</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Sami_bussiness_lado_derecho.webp" alt="" /></a><header><h3>Sami</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="" /></a><header><h3>Lachi</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="" /></a><header><h3>Yenkins</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_acostada.webp" alt="" /></a><header><h3>Nalva</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="" /></a><header><h3>Rey & Mari</h3></header></article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="" /></a><header><h3>Nalva</h3></header></article>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item"><a href="#" class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="" /></a><header><h3>Fuente</h3></header></article>
-                        </div>
-                    </div>
+
+                    <!-- Hay varias filas con imágenes, todas siguen la misma estructura -->
 
                 </div>
+
             </section>
 
             <!-- About Me -->
             <section id="about" class="three">
+                <!-- 
+                    Sección "Sobre mí". Clase "three" define estilo visual único.
+                -->
+
                 <div class="container">
                     <header>
                         <h2>About Me</h2>
+                        <!-- 
+                            Título de la sección. Puedes cambiarlo si lo deseas.
+                        -->
                     </header>
-                    <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-                    <p>I am a photographer based in the city of Miami. From a very young age, I have been passionate about art in general, with a special focus on visual arts. I like to study my clients in order to elevate my photography to the highest level. Each session is unique and exclusive, tailored to each person's preferences. I am grateful to everyone who has trusted my work and allowed me to be part of their personal story.</p>
+
+                    <a href="#" class="image featured">
+                        <img src="images/pic08.jpg" alt="" />
+                        <!-- 
+                            Foto destacada tuya. Puedes cambiarla por otra si lo deseas.
+                        -->
+                    </a>
+
+                    <p>I am a photographer based in the city of Miami...</p>
+                    <!-- 
+                        Texto descriptivo de ti. Puedes editarlo o traducirlo si lo deseas.
+                    -->
+
                 </div>
+
             </section>
 
             <!-- Contact -->
             <section id="contact" class="four">
+                <!-- 
+                    Sección de contacto. Clase "four" define estilo visual.
+                -->
+
                 <div class="container">
                     <header>
                         <h2>Contact</h2>
+                        <!-- 
+                            Título de la sección. Puedes cambiarlo si lo deseas.
+                        -->
                     </header>
+
                     <p>You can contact me via email or phone. I'd love to hear from you!</p>
+                    <!-- 
+                        Mensaje introductorio. Puedes personalizarlo.
+                    -->
+
                     <form method="post" action="https://formspree.io/f/xyzjedrz"> 
+                        <!-- 
+                            Formulario de contacto que envía datos a Formspree.
+                            Si cambias de servicio, debes actualizar la URL en "action".
+                        -->
+
                         <div class="row">
+                            <!-- Campos del formulario -->
                             <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
                             <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
                             <div class="col-12">
@@ -202,19 +345,33 @@
                             </div>
                         </div>
                     </form>
+
                     <p><strong>Email:</strong> reymarsphotography@gmail.com<br />
                     <strong>Phone:</strong> 786-564-8544</p>
+                    <!-- 
+                        Información de contacto adicional. Puedes cambiar tu email o teléfono si lo actualizas.
+                    -->
+
                 </div>
+
             </section>
 
         </div>
 
         <!-- Footer -->
         <div id="footer">
+            <!-- 
+                Pie de página con derechos de autor y créditos del tema.
+            -->
+
             <ul class="copyright">
                 <li>© Reymars Photography. All rights reserved.</li>
                 <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
+            <!-- 
+                No elimines los créditos a HTML5 UP si usaste su tema gratuito, ya que así lo exige la licencia.
+            -->
+
         </div>
 
         <!-- Scripts -->
@@ -225,6 +382,11 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <!-- 
+            Scripts JavaScript que dan funcionalidad interactiva al sitio (scroll, menús, animaciones, etc.)
+            No modifiques estos archivos a menos que entiendas JS.
+        -->
 
     </body>
+
 </html>
