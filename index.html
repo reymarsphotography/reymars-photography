@@ -1,90 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos básicos -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Título de la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>REYMARS | Fotografía Profesional</title>
-    
-    <!-- Enlace al archivo CSS principal -->
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Icono de pestaña (favicon) - OPCIONAL -->
-    <!-- Si lo añades, coloca una imagen en 'images/favicon.ico' -->
+    <!-- Icono de pestaña -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
 
-    <!-- Navegación superior fija -->
-    <nav class="navbar">
-        <!-- Logo o nombre del sitio -->
-        <a href="#" class="logo">REYMARS</a>
+<!-- Navegación superior fija -->
+<nav class="navbar">
+    <a href="#" class="logo">REYMARS</a>
+    <div class="nav-right">
+        <a href="#gallery">Galería</a>
+        <a href="#about">Sobre Mí</a>
+        <a href="#contact">Contacto</a>
+    </div>
+</nav>
 
-        <!-- Menú de navegación -->
-        <div class="nav-right">
-            <!-- Enlaces internos con scroll suave -->
-            <a href="#gallery">Galería</a>
-            <a href="#about">Sobre Mí</a>
-            <a href="#contact">Contacto</a>
+<!-- Hero Section - Portada -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>REYMARS</h1>
+    </div>
+</section>
 
-            <!-- Redes sociales - Puedes cambiar los enlaces -->
-            <a href="https://instagram.com/tu_perfil"  target="_blank">
-                <img src="images/instagram.svg" alt="Instagram" class="social-icon-img" />
-            </a>
-            <a href="https://facebook.com/tu_perfil"  target="_blank">
-                <img src="images/facebook.svg" alt="Facebook" class="social-icon-img" />
-            </a>
-        </div>
-    </nav>
+<!-- Galería de imágenes -->
+<section class="gallery-section" id="gallery">
+    <h2>Galería</h2>
+    <div class="gallery-grid" id="gallery-grid"></div>
+</section>
 
-    <!-- Hero Section - Portada principal -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>REYMARS</h1>
-        </div>
-    </section>
+<!-- Sobre Mí -->
+<section class="about-section" id="about">
+    <h2>Sobre Mí</h2>
+    <p>
+        Soy un apasionado de la fotografía profesional, especializado en retratos artísticos, sesiones de pareja, familias y momentos únicos.
+        Mi objetivo es capturar emociones reales, historias auténticas y belleza natural en cada sesión.
+    </p>
+    <p>
+        Trabajo con luz natural y artificial, siempre adaptándome a las necesidades de mis clientes. ¡Cada imagen cuenta una historia!
+    </p>
+</section>
 
-    <!-- Galería de imágenes -->
-    <section class="gallery-section" id="gallery">
-        <h2>Galería</h2>
-        <!-- Contenedor dinámico llenado por script.js -->
-        <div class="gallery-grid" id="gallery-grid"></div>
-    </section>
+<!-- Contacto -->
+<section class="contact-section" id="contact">
+    <h2>Contacto</h2>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+        <div id="form-status"></div>
+    </form>
+</section>
 
-    <!-- Sobre Mí -->
-    <section class="about-section" id="about">
-        <h2>Sobre Mí</h2>
-        <p>
-            Soy un apasionado de la fotografía profesional, especializado en retratos artísticos, sesiones de pareja, familias y momentos únicos.
-            Mi objetivo es capturar emociones reales, historias auténticas y belleza natural en cada sesión.
-        </p>
-        <p>
-            Trabajo con luz natural y artificial, siempre adaptándome a las necesidades de mis clientes. ¡Cada imagen cuenta una historia!
-        </p>
-    </section>
+<!-- Footer / Pie de página -->
+<footer class="footer">
+    <p>&copy; 2025 REYMARS Fotografía. Todos los derechos reservados.</p>
+</footer>
 
-    <!-- Contacto -->
-    <section class="contact-section" id="contact">
-        <h2>Contacto</h2>
-        <!-- Formulario de contacto -->
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Tu nombre" required />
-            <input type="email" name="email" placeholder="Tu correo electrónico" required />
-            <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-            <div id="form-status"></div>
-        </form>
-    </section>
+<!-- Botones flotantes de redes sociales -->
+<div class="floating-social">
+    <a href="https://www.instagram.com/tu_perfil"  target="_blank" class="social-button instagram" aria-label="Instagram">
+        <img src="images/instagram.svg" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/tu_perfil"  target="_blank" class="social-button facebook" aria-label="Facebook">
+        <img src="images/facebook.svg" alt="Facebook" />
+    </a>
+    <a href="https://wa.me/123456789"  target="_blank" class="social-button whatsapp" aria-label="WhatsApp">
+        <img src="images/whatsapp.svg" alt="WhatsApp" />
+    </a>
+</div>
 
-    <!-- Footer / Pie de página -->
-    <footer class="footer">
-        <p>&copy; 2025 REYMARS Fotografía. Todos los derechos reservados.</p>
-    </footer>
+<!-- Script principal -->
+<script src="script.js"></script>
 
-    <!-- Script principal -->
-    <script src="script.js"></script>
 </body>
 </html>
