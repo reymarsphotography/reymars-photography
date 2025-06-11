@@ -1,12 +1,13 @@
+// Esperamos a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
 
     // === 1. Navbar fija con efecto al hacer scroll ===
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
+            navbar.classList.add('scrolled'); // Agrega clase 'scrolled' si bajamos más de 100px
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.classList.remove('scrolled'); // La quita si estamos arriba
         }
     });
 
@@ -47,16 +48,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
 
+        // Destacado en posición específica (índice 6)
         if (index === 6) galleryItem.classList.add('destacado');
 
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.alt;
-        img.loading = "lazy";
+        img.loading = "lazy"; // Carga diferida para mejorar rendimiento
 
+        // Manejo de errores al cargar imagen
         img.onerror = function() {
             console.warn(`Error cargando imagen: ${image.src}`);
-            this.src = 'images/placeholder.jpg';
+            this.src = 'images/placeholder.jpg'; // Imagen de respaldo (opcional)
             this.alt = 'Imagen no disponible';
         };
 
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             img.src = image.src;
         });
     }
-    preloadImages();
+    preloadImages(); // Llamamos a esta función para empezar a precargar
 
     // === 6. Manejo del formulario de contacto ===
     const contactForm = document.getElementById('contact-form');
@@ -95,12 +98,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Evitamos recargar la página
 
-            const formData = new FormData(contactForm);
+            const formData = new FormData(contactForm); // Obtenemos los datos del formulario
             formStatus.textContent = 'Enviando mensaje...';
             formStatus.style.color = '#fff';
 
+            // Enviar datos a Formspree
             fetch('https://formspree.io/f/xyzjedrz',  {
                 method: 'POST',
                 body: formData,
@@ -108,14 +112,16 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(response => {
                 if (response.ok) {
+                    // Éxito
                     formStatus.textContent = '¡Mensaje enviado con éxito!';
                     formStatus.style.color = '#4CAF50';
-                    contactForm.reset();
+                    contactForm.reset(); // Limpiamos campos
                 } else {
                     throw new Error('Error en la respuesta del servidor');
                 }
             })
             .catch(error => {
+                // Error
                 formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.';
                 formStatus.style.color = '#f44336';
             });
