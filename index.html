@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Título de la página -->
     <title>REYMARS | Fotografía Profesional</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="nav-left">
-            <a href="#" class="logo">REYMARS</a>
-        </div>
-        <div class="nav-right">
-            <a href="#work">TRABAJOS</a>
-            <a href="#about">SOBRE MÍ</a>
-            <a href="#contact">CONTACTO</a>
-            <a href="https://www.instagram.com/reymar_s_photography/"  target="_blank" aria-label="Instagram">
-                <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png"  alt="Instagram" class="social-icon-img">
-            </a>
-            <a href="https://www.facebook.com/reymarsphotography/"  target="_blank" aria-label="Facebook">
-                <img src="https://cdn-icons-png.flaticon.com/24/145/145802.png"  alt="Facebook" class="social-icon-img">
-            </a>
-            <a href="https://wa.me/17865648544"  target="_blank" aria-label="WhatsApp">
-                <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png"  alt="WhatsApp" class="social-icon-img">
-            </a>
-        </div>
-    </div>
+    
+    <!-- Enlace al archivo CSS principal -->
+    <link rel="stylesheet" href="styles.css" />
 
-    <!-- Hero Section -->
-    <div class="hero">
+    <!-- Icono de pestaña (favicon) - OPCIONAL -->
+    <!-- Si lo añades, coloca una imagen en 'images/favicon.ico' -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <!-- Navegación superior fija -->
+    <nav class="navbar">
+        <!-- Logo o nombre del sitio -->
+        <a href="#" class="logo">REYMARS</a>
+
+        <!-- Menú de navegación -->
+        <div class="nav-right">
+            <!-- Enlaces internos con scroll suave -->
+            <a href="#gallery">Galería</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#contact">Contacto</a>
+
+            <!-- Redes sociales - Puedes cambiar los enlaces -->
+            <a href="https://instagram.com/tu_perfil"  target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" class="social-icon-img" />
+            </a>
+            <a href="https://facebook.com/tu_perfil"  target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" class="social-icon-img" />
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Portada principal -->
+    <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>REYMARS</h1>
         </div>
-    </div>
+    </section>
 
-    <!-- Galería -->
-    <div class="gallery-section" id="work">
-        <h2>TRABAJOS RECIENTES</h2>
+    <!-- Galería de imágenes -->
+    <section class="gallery-section" id="gallery">
+        <h2>Galería</h2>
+        <!-- Contenedor dinámico llenado por script.js -->
         <div class="gallery-grid" id="gallery-grid"></div>
-    </div>
+    </section>
 
     <!-- Sobre Mí -->
-    <div class="about-section" id="about">
-        <h2>SOBRE MÍ</h2>
-        <p>Soy un fotógrafo establecido en la ciudad de Miami. Desde muy joven me he interesado por el arte en general, destacándome en las artes visuales. Me gusta estudiar a mis clientes con el objetivo de llevar al máximo mi nivel fotográfico. Cada sesión es única y exclusiva en dependencia de los gustos de cada persona.</p>
-        <p>Agradezco a todos los que han confiado en mi trabajo y me han permitido ser parte de su historia personal.</p>
-    </div>
+    <section class="about-section" id="about">
+        <h2>Sobre Mí</h2>
+        <p>
+            Soy un apasionado de la fotografía profesional, especializado en retratos artísticos, sesiones de pareja, familias y momentos únicos.
+            Mi objetivo es capturar emociones reales, historias auténticas y belleza natural en cada sesión.
+        </p>
+        <p>
+            Trabajo con luz natural y artificial, siempre adaptándome a las necesidades de mis clientes. ¡Cada imagen cuenta una historia!
+        </p>
+    </section>
 
     <!-- Contacto -->
-    <div class="contact-section" id="contact">
-        <h2>CONTACTO</h2>
-        <form id="contact-form" action="https://formspree.io/f/xyzjedrz"  method="POST">
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo Electrónico" required>
-            <textarea name="message" placeholder="Mensaje" required></textarea>
+    <section class="contact-section" id="contact">
+        <h2>Contacto</h2>
+        <!-- Formulario de contacto -->
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
             <button type="submit">Enviar Mensaje</button>
+            <div id="form-status"></div>
         </form>
-        <div id="form-status"></div>
-        <p>reymarsphotography@gmail.com<br>+1 786-564-8544</p>
-    </div>
+    </section>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2025 REYMARS FOTOGRAFÍA. TODOS LOS DERECHOS RESERVADOS.</p>
-    </div>
+    <!-- Footer / Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025 REYMARS Fotografía. Todos los derechos reservados.</p>
+    </footer>
 
-    <!-- Script -->
+    <!-- Script principal -->
     <script src="script.js"></script>
 </body>
 </html>
