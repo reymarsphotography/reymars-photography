@@ -251,7 +251,7 @@ body {
     text-align: center;
 }
 
-/* Botones flotantes de redes sociales */
+/* === Botones flotantes de redes sociales === */
 .floating-social {
     position: fixed;
     right: 2rem;
@@ -271,12 +271,13 @@ body {
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
 }
 
-.social-button img {
+.social-button svg {
+    fill: #fff;
     width: 26px;
     height: 26px;
-    filter: brightness(1.2);
     transition: filter 0.2s ease;
 }
 
