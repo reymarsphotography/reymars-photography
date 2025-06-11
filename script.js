@@ -1,17 +1,15 @@
-// Esperamos a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
-
-    // === 1. Navbar fija con efecto al hacer scroll ===
+    // Efecto de navbar al hacer scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
-            navbar.classList.add('scrolled'); // Agrega clase 'scrolled' si bajamos más de 100px
+            navbar.classList.add('scrolled');
         } else {
-            navbar.classList.remove('scrolled'); // La quita si estamos arriba
+            navbar.classList.remove('scrolled');
         }
     });
 
-    // === 2. Configuración de imágenes para la galería ===
+    // Configuración de imágenes
     const imageData = [
         { src: "images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp", alt: "Daimer y Marilia - Conexión de pareja" },
         { src: "images/Marilia_Low_key_mirando_a_la_izquierda.webp", alt: "Marilia - Retrato atmosférico" },
@@ -42,21 +40,21 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const galleryContainer = document.getElementById('gallery-grid');
-
-    // === 3. Generar galería dinámica ===
+    
+    // Crear elementos de galería
     imageData.forEach((image, index) => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
-
-        // Destacado en posición específica (índice 6)
+        
+        // Destacado en posición específica
         if (index === 6) galleryItem.classList.add('destacado');
 
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.alt;
-        img.loading = "lazy"; // Carga diferida para mejorar rendimiento
+        img.loading = "lazy";
 
-        // Manejo de errores al cargar imagen
+        // Manejo de errores
         img.onerror = function() {
             console.warn(`Error cargando imagen: ${image.src}`);
             this.src = 'images/placeholder.jpg'; // Imagen de respaldo (opcional)
@@ -67,13 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
         galleryContainer.appendChild(galleryItem);
     });
 
-    // === 4. Scroll suave para anclas internas ===
+    // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const target = document.querySelector(targetId);
-
+            
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
@@ -83,28 +81,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // === 5. Precarga de imágenes ===
+    // Precarga de imágenes
     function preloadImages() {
         imageData.forEach(image => {
             const img = new Image();
             img.src = image.src;
         });
     }
-    preloadImages(); // Llamamos a esta función para empezar a precargar
+    preloadImages();
 
-    // === 6. Manejo del formulario de contacto ===
+    // Manejo del formulario
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // Evitamos recargar la página
-
-            const formData = new FormData(contactForm); // Obtenemos los datos del formulario
+            e.preventDefault();
+            const formData = new FormData(contactForm);
             formStatus.textContent = 'Enviando mensaje...';
             formStatus.style.color = '#fff';
 
-            // Enviar datos a Formspree
             fetch('https://formspree.io/f/xyzjedrz',  {
                 method: 'POST',
                 body: formData,
@@ -112,16 +108,14 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(response => {
                 if (response.ok) {
-                    // Éxito
                     formStatus.textContent = '¡Mensaje enviado con éxito!';
                     formStatus.style.color = '#4CAF50';
-                    contactForm.reset(); // Limpiamos campos
+                    contactForm.reset();
                 } else {
                     throw new Error('Error en la respuesta del servidor');
                 }
             })
             .catch(error => {
-                // Error
                 formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.';
                 formStatus.style.color = '#f44336';
             });
