@@ -95,7 +95,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 16rem; /* Texto "REYMARS" muy grande */
+    font-size: 50rem; /* Texto "REYMARS" muy grande */
     margin: 0;
     background-image: url('images/Marinalva_acostada.webp');
     background-clip: text;
