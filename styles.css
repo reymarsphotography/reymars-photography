@@ -94,7 +94,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 6rem;
+    font-size: 12rem; /* Texto gigante */
     margin-bottom: 1rem;
     background-image: url('images/Marinalva_acostada.webp');
     background-clip: text;
@@ -104,6 +104,12 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+    line-height: 1;
+}
+
+.hero p {
+    font-size: 2rem;
+    margin-top: -5rem; /* Ajuste para que no esté tan separado del texto grande */
 }
 
 /* Galería */
@@ -232,16 +238,24 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 9rem;
+    }
+
+    .hero p {
+        font-size: 1.8rem;
+        margin-top: -4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 6rem;
     }
-    
+
     .hero p {
         font-size: 1.5rem;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
+        margin-top: -3rem;
     }
 }
