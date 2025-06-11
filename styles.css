@@ -1,316 +1,93 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Tipografía y estilo general */
+/* === Estilos generales === */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
 }
 
-/* Navbar - Barra superior fija */
 .navbar {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: transparent;
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 0.5rem 2rem;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.nav-right a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-right a:hover {
-    color: #555;
-}
-
-/* Hero Section - Sección principal */
-.hero {
-    height: 100vh;
-    background: url('images/Marinalva_acostada.webp') center/cover no-repeat;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+    gap: 20px;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
 }
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    /* AJUSTAR POSICIÓN DEL TEXTO */
-    padding: 4rem 2rem;
-}
-
-.hero h1 {
-    font-size: 25rem;
-    margin: 0;
-    background-image: url('images/Marinalva_acostada.webp');
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: cover;
-    text-transform: uppercase;
+.navbar a {
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    letter-spacing: 4px;
-    line-height: 1;
-    white-space: nowrap;
 }
-
-/* Galería */
-.gallery-section {
-    background-color: #f8f8f8;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.gallery-section h2,
-.about-section h2,
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #000;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.gallery-section h2::after,
-.about-section h2::after,
-.contact-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
+.navbar.scrolled {
     background-color: #000;
-    margin: 0.5rem auto 0;
 }
 
-.gallery-grid {
+/* === Galería === */
+.gallery-container {
+    padding: 100px 20px 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
 }
-
 .gallery-item {
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 8px;
 }
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-}
-
 .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
-
 .gallery-item:hover img {
     transform: scale(1.05);
 }
-
 .gallery-item.destacado {
     grid-column: span 2;
+    grid-row: span 2;
 }
 
-/* Sobre Mí */
-.about-section {
-    padding: 4rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #000;
-}
-
-.about-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-/* Contacto */
+/* === Formulario de contacto === */
 .contact-section {
-    background-color: #f8f8f8;
-    padding: 4rem 2rem;
+    padding: 40px 20px;
+    background-color: #222;
     text-align: center;
 }
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #000;
-}
-
-.contact-section form {
-    max-width: 600px;
+#contact-form {
+    max-width: 500px;
     margin: 0 auto;
-    display: grid;
-    gap: 1.5rem;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-section button {
-    background-color: #000;
-    color: white;
-    padding: 1rem;
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    resize: none;
+    font-size: 16px;
+}
+#contact-form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-.contact-section button:hover {
-    background-color: #333;
+#contact-form button:hover {
+    background-color: #45a049;
 }
-
 #form-status {
-    margin-top: 1rem;
+    margin-top: 10px;
     font-weight: bold;
-}
-
-/* Footer */
-.footer {
-    background-color: #000;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-/* === Botones flotantes de redes sociales === */
-.floating-social {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 999;
-}
-
-.social-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-}
-
-.social-button svg {
-    fill: #fff;
-    width: 26px;
-    height: 26px;
-    transition: filter 0.2s ease;
-}
-
-.social-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-}
-
-.social-button.instagram { background-color: #e1306c; }
-.social-button.facebook { background-color: #1877f2; }
-.social-button.whatsapp { background-color: #25d366; }
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 12rem;
-    }
-
-    .gallery-section h2,
-    .about-section h2,
-    .contact-section h2 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 8rem;
-    }
-
-    .gallery-section h2,
-    .about-section h2,
-    .contact-section h2 {
-        font-size: 2rem;
-    }
 }
