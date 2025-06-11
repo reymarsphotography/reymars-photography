@@ -15,8 +15,12 @@
   <!-- Babel para procesar JSX -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
   
-  <!-- Estilos de animación (antes estaban en <style jsx>) -->
+  <!-- Estilos de animación -->
   <style>
+    /* Habilita el scroll suave para los anclajes # */
+    html {
+      scroll-behavior: smooth;
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -44,19 +48,15 @@
     .animation-delay-400 {
       animation-delay: 0.4s;
     }
-    /* Para que funcione el smooth scroll con los links */
-    html {
-      scroll-behavior: smooth;
-    }
   </style>
 </head>
 <body>
   <div id="root"></div>
 
-  <!-- Tu componente React -->
+  <!-- Tu componente React (con ruta relativa) -->
   <script type="text/babel" src="./App.jsx"></script>
 
-  <!-- *** PASO CRUCIAL: Renderizar la aplicación *** -->
+  <!-- Script para renderizar la aplicación React en el div #root -->
   <script type="text/babel">
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
