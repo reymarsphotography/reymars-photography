@@ -2,23 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reymars Photography</title>
-
+  
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.5/dist/tailwind.min.css"  rel="stylesheet">
-
+  
   <!-- React y ReactDOM -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"  crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"  crossorigin></script>
-
-  <!-- Babel desde jsDelivr -->
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script> 
+  
+  <!-- Babel para procesar JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+  
+  <!-- Estilos de animación (antes estaban en <style jsx>) -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    .animate-fadeInDown {
+      animation: fadeInDown 1s ease-out forwards;
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .animation-delay-200 {
+      animation-delay: 0.2s;
+    }
+    .animation-delay-400 {
+      animation-delay: 0.4s;
+    }
+    /* Para que funcione el smooth scroll con los links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen font-sans">
+<body>
   <div id="root"></div>
 
   <!-- Tu componente React -->
   <script type="text/babel" src="./App.jsx"></script>
+
+  <!-- *** PASO CRUCIAL: Renderizar la aplicación *** -->
+  <script type="text/babel">
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
 </body>
 </html>
