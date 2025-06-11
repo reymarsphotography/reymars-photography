@@ -1,94 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>REYMARS | Fotografía Profesional</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Icono de pestaña -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Fotográfica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Navegación superior fija -->
-<nav class="navbar">
-    <a href="#" class="logo">REYMARS</a>
-    <div class="nav-right">
-        <a href="#gallery">Galería</a>
-        <a href="#about">Sobre Mí</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#gallery-grid">Galería</a>
         <a href="#contact">Contacto</a>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero Section - Portada -->
-<section class="hero" id="inicio">
-    <div class="hero-content">
-        <h1>REYMARS</h1>
-    </div>
-</section>
+    <!-- Galería -->
+    <section id="gallery-grid" class="gallery-container"></section>
 
-<!-- Galería de imágenes -->
-<section class="gallery-section" id="gallery">
-    <h2>Galería</h2>
-    <div class="gallery-grid" id="gallery-grid"></div>
-</section>
+    <!-- Contacto -->
+    <section id="contact" class="contact-section">
+        <h2>Contáctame</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
 
-<!-- Sobre Mí -->
-<section class="about-section" id="about">
-    <h2>Sobre Mí</h2>
-    <p>
-        Soy un apasionado de la fotografía profesional, especializado en retratos artísticos, sesiones de pareja, familias y momentos únicos.
-        Mi objetivo es capturar emociones reales, historias auténticas y belleza natural en cada sesión.
-    </p>
-    <p>
-        Trabajo con luz natural y artificial, siempre adaptándome a las necesidades de mis clientes. ¡Cada imagen cuenta una historia!
-    </p>
-</section>
-
-<!-- Contacto -->
-<section class="contact-section" id="contact">
-    <h2>Contacto</h2>
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Tu nombre" required />
-        <input type="email" name="email" placeholder="Tu correo electrónico" required />
-        <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        <button type="submit">Enviar Mensaje</button>
-        <div id="form-status"></div>
-    </form>
-</section>
-
-<!-- Footer / Pie de página -->
-<footer class="footer">
-    <p>&copy; 2025 REYMARS Fotografía. Todos los derechos reservados.</p>
-</footer>
-
-<!-- Botones flotantes de redes sociales -->
-<div class="floating-social">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/reymar_s_photography/"  target="_blank" class="social-button instagram" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.585.07-4.85.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.06 2.695.204.2 2.689.06 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.06 4.948.144 4.353 2.629 6.853 6.992 6.993 1.28.047 1.689.06 4.949.06 3.259 0 3.668-.014 4.948-.06 4.354-.145 6.853-2.634 6.993-6.993.047-1.28.06-1.689.06-4.949 0-3.259-.014-3.667-.06-4.947-.145-4.359-2.634-6.853-6.993-6.993-1.281-.047-1.69-.06-4.95-.06zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
-    </a>
-
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/reymarsphotography/"  target="_blank" class="social-button facebook" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-            <path d="M9.103 21.484h3.968V13.406h2.62l.397-3.063h-3.017v-1.953c0-.922.266-1.563 1.61-1.563h1.656V4.266c-1.266-.188-1.766-.703-2.906-1.672-1.828-1.531-3.734-2.25-6.25-2.25-2.516 0-4.422.719-6.25 2.25-1.14.97-1.64 1.484-2.906 1.672v2.64h1.656c1.344 0 1.61.641 1.61 1.563v2.016H5.75v3.063h2.62v8.078z"/>
-        </svg>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/7865648544"  target="_blank" class="social-button whatsapp" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-            <path d="M19.05 4.94A9.62 9.62 0 0012 2.11 9.62 9.62 0 004.94 4.95a9.62 9.62 0 00-2.83 7.06A9.62 9.62 0 004.95 19.07a9.57 9.57 0 006.97 3.02c1.95 0 3.81-.56 5.43-1.61l.31-.21 1.46.39.41.11a1.48 1.48 0 001.72-1.72l-.11-.41-.39-1.46-.21-.31a9.57 9.57 0 001.61-5.43 9.62 9.62 0 00-2.83-7.06zm-7 11.06a4.5 4.5 0 01-2.26-.62l-.29-.18-.94.26-.3.08a1.5 1.5 0 01-1.73-1.73l.09-.3.26-.94-.18-.29a4.5 4.5 0 01-.62-2.26 4.5 4.5 0 01.66-2.26l.18-.29.85-.38.27-.12a1.5 1.5 0 011.73 0l.27.12 1.26 1.26.21.21a1.5 1.5 0 010 2.08l-.21.21-.59.59.12.27a1.5 1.5 0 010 1.73l-.12.27a4.5 4.5 0 01-2.26.66zm2.26-6.26a1.5 1.5 0 01-1.06.44 1.5 1.5 0 01-1.06-.44l-.3-.3a1.5 1.5 0 010-2.12l.3-.3.3.3a1.5 1.5 0 010 2.12l-.3.3z"/>
-        </svg>
-    </a>
-</div>
-
-<!-- Script principal -->
-<script src="script.js"></script>
-
+    <script src="script.js" defer></script>
 </body>
 </html>
