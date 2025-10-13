@@ -1,99 +1,22 @@
 <!DOCTYPE HTML>
-<!--
-    REYMAR'S Photography
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="en" data-lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Reymars Photography | Capturing Moments in Miami</title>
-    <meta name="description" content="Photographer in Miami specializing in portraits, couples, and events. Unique, emotional images tailored to each person. Book your session." />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="theme-color" content="#000000" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Reymars Photography" />
-    <meta property="og:description" content="Portraits, couples and events photography in Miami. Book your session." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://reymarsphotography.art/" />
-    <meta property="og:image" content="https://reymarsphotography.art/images/Mari.webp" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Reymars Photography" />
-    <meta name="twitter:description" content="Portraits, couples and events photography in Miami. Book your session." />
-    <meta name="twitter:image" content="https://reymarsphotography.art/images/Mari.webp" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://reymarsphotography.art/" />
+    <meta name="description" content="Reymars Photography | Professional photographer in Miami. Portraits, couples, and events photography." />
+    <title>Reymars Photography | Capturing Moments in Miami</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 
-    <style>
-      .lang-switch {
-        position: absolute;
-        top: .75rem;
-        right: .75rem;
-        z-index: 1001;
-      }
-      .lang-switch select {
-        background: rgba(0,0,0,.6);
-        color: #fff;
-        border: 1px solid rgba(255,255,255,.25);
-        border-radius: 8px;
-        padding: .35rem .6rem;
-        font-weight: 600;
-      }
-      .fab {
-        position: fixed;
-        right: 1rem;
-        bottom: 1rem;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        gap: .6rem;
-      }
-      .fab a {
-        border-radius: 999px;
-        box-shadow: 0 8px 18px rgba(0,0,0,.25);
-        display: inline-flex;
-        align-items: center;
-        gap: .6rem;
-        font-weight: 700;
-        padding: 0.9rem 1.2rem;
-        text-decoration: none;
-        color: inherit;
-      }
-      .fab .wapp-btn {
-        background: #25D366;
-        color: #fff !important;
-      }
-      .fab .top-btn {
-        background: rgba(0,0,0,.75);
-        color: #fff !important;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .25s ease;
-      }
-      .fab .top-btn.show {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      @media (min-width: 980px) {
-        .fab { right: 1.5rem; bottom: 1.5rem; }
-      }
-      .visually-hidden {
-        position: absolute;
-        left: -9999px;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-      }
-    </style>
+    <!-- Manifest & Icons -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="images/icons/icon-512.png">
+    <meta name="theme-color" content="#000000">
 
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75D79E0SB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -101,54 +24,24 @@
       gtag('js', new Date());
       gtag('config', 'G-K75D79E0SB');
     </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Reymars Photography",
-      "image": "https://reymarsphotography.art/images/Mari.webp",
-      "url": "https://reymarsphotography.art/",
-      "telephone": "+1-786-564-8544",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Miami",
-        "addressRegion": "FL",
-        "addressCountry": "US"
-      },
-      "areaServed": "Miami",
-      "sameAs": [
-        "https://www.instagram.com/reymar_s_photography/",
-        "https://www.facebook.com/reymarsphotography/"
-      ]
-    }
-    </script>
   </head>
 
   <body class="is-preload">
-    <!-- Language Switch -->
-    <div class="lang-switch">
-      <label for="langSelect" class="visually-hidden">Language</label>
-      <select id="langSelect">
-        <option value="en" selected>EN</option>
-        <option value="es">ES</option>
-        <option value="pt">PT</option>
-      </select>
-    </div>
-
     <!-- Header -->
     <div id="header">
       <div class="top">
+        <!-- Nav -->
         <nav id="nav">
           <ul>
-            <li><a href="#top" id="top-link"><span class="icon solid fa-home"></span> Intro</a></li>
-            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th"></span> Portfolio</a></li>
-            <li><a href="#about" id="about-link"><span class="icon solid fa-user"></span> About Me</a></li>
-            <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope"></span> Contact</a></li>
+            <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+            <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+            <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
           </ul>
         </nav>
       </div>
       <div class="bottom">
+        <!-- Social Icons -->
         <ul class="icons">
           <li><a href="https://www.instagram.com/reymar_s_photography/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
           <li><a href="https://www.facebook.com/reymarsphotography/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -159,11 +52,13 @@
 
     <!-- Main -->
     <div id="main">
+
       <!-- Intro -->
       <section id="top" class="one dark cover">
         <div class="container">
           <header>
             <h2 class="alt">Hi! I'm <strong>Reymars Photography</strong>.</h2>
+            <p>Capturing emotions and timeless stories through the art of photography.</p>
           </header>
           <footer>
             <a href="#portfolio" class="button scrolly">See My Work</a>
@@ -179,14 +74,25 @@
           </header>
           <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
 
+          <!-- Portfolio Grid -->
           <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" /></a><header><h3>Sadiel</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" /></a><header><h3>Rey</h3></header></article></div>
+            <!-- Randomized and updated order -->
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy"></a><header><h3>Rey</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy"></a><header><h3>Mari</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy"></a><header><h3>Sadiel</h3></header></article></div>
           </div>
 
           <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/PI.webp" alt="PI artistic portrait" loading="lazy" decoding="async" /></a><header><h3>PI</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/PI.webp" alt="PI photo" loading="lazy"></a><header><h3>PI</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy"></a><header><h3>Mari & Agustina</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess look" loading="lazy"></a><header><h3>Nalva</h3></header></article></div>
+          </div>
+
+          <!-- Existing gallery remains -->
+          <div class="row">
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking portrait" loading="lazy"></a><header><h3>Lachi</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenkins family photo" loading="lazy"></a><header><h3>Yenkins</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli piano portrait" loading="lazy"></a><header><h3>Juli</h3></header></article></div>
           </div>
         </div>
       </section>
@@ -197,8 +103,8 @@
           <header>
             <h2>About Me</h2>
           </header>
-          <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Photographer portrait" loading="lazy" decoding="async" /></a>
-          <p>I am a photographer based in Miami. I have always been passionate about art, especially visual arts. I study my clients to elevate photography to the highest level. Each session is unique and exclusive, tailored to each person’s style and preferences.</p>
+          <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Reymars Photography studio" /></a>
+          <p>I am a photographer based in Miami, passionate about visual arts and storytelling. Every session is unique and designed to reflect the personality and emotions of my clients. Thank you for trusting my vision and allowing me to capture your moments.</p>
         </div>
       </section>
 
@@ -208,7 +114,7 @@
           <header>
             <h2>Contact</h2>
           </header>
-          <p>You can contact me via email or phone. I'd love to hear from you!</p>
+          <p>Let's create something beautiful together. Feel free to reach out for bookings or inquiries!</p>
           <form method="post" action="https://formspree.io/f/xyzjedrz">
             <div class="row">
               <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
@@ -217,8 +123,8 @@
               <div class="col-12"><input type="submit" value="Send Message" /></div>
             </div>
           </form>
-          <p><strong>Email:</strong> reymarsphotography@gmail.com<br />
-          <strong>Phone:</strong> 786-564-8544</p>
+          <p><strong>Email:</strong> <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br>
+             <strong>Phone:</strong> <a href="tel:17865648544">786-564-8544</a></p>
         </div>
       </section>
     </div>
@@ -231,12 +137,39 @@
       </ul>
     </div>
 
-    <!-- Floating buttons -->
-    <div class="fab">
-      <a href="#contact" class="button scrolly"><span class="icon solid fa-calendar-check"></span> Book a Session</a>
-      <a id="whatsappBtn" class="wapp-btn" href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I%27d%20like%20to%20book%20a%20photoshoot." target="_blank" rel="noopener"><span class="icon brands fa-whatsapp"></span> WhatsApp</a>
-      <a href="#top" class="top-btn scrolly"><span class="icon solid fa-arrow-up"></span> Top</a>
-    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon" style="width:60px;height:60px;">
+    </a>
+
+    <!-- Book a Session Button -->
+    <a href="#contact" class="book-session">Book a Session</a>
+
+    <!-- Styles for floating buttons -->
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
+      .book-session {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background: #000;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        z-index: 1000;
+        transition: 0.3s;
+      }
+      .book-session:hover {
+        background: #444;
+      }
+    </style>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -246,12 +179,14 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Service Worker registration (optional) -->
     <script>
-      const topBtn = document.querySelector(".top-btn");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 400) topBtn.classList.add("show");
-        else topBtn.classList.remove("show");
-      });
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(() => console.log('✅ Service Worker registered'))
+          .catch(err => console.log('❌ SW failed:', err));
+      }
     </script>
   </body>
 </html>
