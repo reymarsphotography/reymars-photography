@@ -3,6 +3,7 @@
   "short_name": "ReymarsPhoto",
   "description": "Professional photographer in Miami. Portraits, couples, and events photography.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
