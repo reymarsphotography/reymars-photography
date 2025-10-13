@@ -1,20 +1,32 @@
 <!DOCTYPE HTML>
+<!--
+    REYMAR'S Photography
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Reymars Photography | Professional photographer in Miami. Portraits, couples, and events photography." />
     <title>Reymars Photography | Capturing Moments in Miami</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Reymars Photography in Miami — portraits, couples and events. Unique, emotional images that tell stories." />
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph / Twitter (SEO social) -->
+    <meta property="og:title" content="Reymars Photography" />
+    <meta property="og:description" content="Portraits, couples and events photography in Miami. Book your session." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/Mari.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- Manifest & Icons -->
+    <!-- App Manifest & Icons -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192.png">
     <link rel="apple-touch-icon" sizes="512x512" href="images/icons/icon-512.png">
-    <meta name="theme-color" content="#000000">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75D79E0SB"></script>
@@ -24,6 +36,18 @@
       gtag('js', new Date());
       gtag('config', 'G-K75D79E0SB');
     </script>
+
+    <!-- Minimal styles for floating buttons -->
+    <style>
+      .whatsapp-float{position:fixed;bottom:20px;right:20px;z-index:1000}
+      .whatsapp-float img{width:56px;height:56px}
+      .book-session{position:fixed;bottom:90px;right:20px;background:#000;color:#fff;padding:12px 18px;border-radius:28px;text-decoration:none;font-weight:700;z-index:1000;transition:.25s}
+      .book-session:hover{background:#333}
+      @media (max-width: 480px){
+        .whatsapp-float img{width:52px;height:52px}
+        .book-session{bottom:84px}
+      }
+    </style>
   </head>
 
   <body class="is-preload">
@@ -52,13 +76,11 @@
 
     <!-- Main -->
     <div id="main">
-
       <!-- Intro -->
       <section id="top" class="one dark cover">
         <div class="container">
           <header>
             <h2 class="alt">Hi! I'm <strong>Reymars Photography</strong>.</h2>
-            <p>Capturing emotions and timeless stories through the art of photography.</p>
           </header>
           <footer>
             <a href="#portfolio" class="button scrolly">See My Work</a>
@@ -74,37 +96,151 @@
           </header>
           <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
 
-          <!-- Portfolio Grid -->
+          <!-- NUEVAS FILAS con tus 4 fotos añadidas -->
           <div class="row">
-            <!-- Randomized and updated order -->
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy"></a><header><h3>Rey</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy"></a><header><h3>Mari</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy"></a><header><h3>Sadiel</h3></header></article></div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" />
+              </a><header><h3>Sadiel</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" />
+              </a><header><h3>Rey</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" />
+              </a><header><h3>Mari</h3></header></article>
+            </div>
           </div>
 
           <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/PI.webp" alt="PI photo" loading="lazy"></a><header><h3>PI</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy"></a><header><h3>Mari & Agustina</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess look" loading="lazy"></a><header><h3>Nalva</h3></header></article></div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/PI.webp" alt="PI portrait" loading="lazy" decoding="async" />
+              </a><header><h3>PI</h3></header></article>
+            </div>
+            <!-- Completo la fila con imágenes existentes para mantener grilla -->
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy" decoding="async" />
+              </a><header><h3>Daimer & Marilia</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key looking left" loading="lazy" decoding="async" />
+              </a><header><h3>Marilian</h3></header></article>
+            </div>
           </div>
 
-          <!-- Existing gallery remains -->
+          <!-- A partir de aquí, tu grilla original completa -->
           <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking portrait" loading="lazy"></a><header><h3>Lachi</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenkins family photo" loading="lazy"></a><header><h3>Yenkins</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli piano portrait" loading="lazy"></a><header><h3>Juli</h3></header></article></div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario looking to the right" loading="lazy" decoding="async" /></a><header><h3>Dario</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="Daniela seated looking right" loading="lazy" decoding="async" /></a><header><h3>Dani</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva at the window looking left" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Marinalva close-up" loading="lazy" decoding="async" /></a><header><h3>Close-up</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay happy looking forward left" loading="lazy" decoding="async" /></a><header><h3>Any</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="Mari with rose looking down" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Steven_feliz_centro.webp" alt="Steven smiling" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Boy with clock on the left" loading="lazy" decoding="async" /></a><header><h3>Lester</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="Jony and Stef high key" loading="lazy" decoding="async" /></a><header><h3>Jony y Stef</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity with Juli on the left" loading="lazy" decoding="async" /></a><header><h3>Juli & Stef</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity looking up right" loading="lazy" decoding="async" /></a><header><h3>Stefanie</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano to the right" loading="lazy" decoding="async" /></a><header><h3>Juli</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key looking left" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers looking right" loading="lazy" decoding="async" /></a><header><h3>Lachi</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking" loading="lazy" decoding="async" /></a><header><h3>Lachi</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenki family portrait" loading="lazy" decoding="async" /></a><header><h3>Yenkins</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_acostada.webp" alt="Marinalva lying down" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari couple portrait" loading="lazy" decoding="async" /></a><header><h3>Rey & Mari</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva looking right" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela at the fountain to the left" loading="lazy" decoding="async" /></a><header><h3>Fuente</h3></header></article>
+            </div>
+            <div class="col-4 col-12-mobile">
+              <article class="item"><a href="#" class="image fit">
+                <!-- ✅ Corregido: sin carácter & -->
+                <img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy" decoding="async" />
+              </a><header><h3>Mari & Agustina</h3></header></article>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- About -->
+      <!-- About Me -->
       <section id="about" class="three">
         <div class="container">
           <header>
             <h2>About Me</h2>
           </header>
-          <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Reymars Photography studio" /></a>
-          <p>I am a photographer based in Miami, passionate about visual arts and storytelling. Every session is unique and designed to reflect the personality and emotions of my clients. Thank you for trusting my vision and allowing me to capture your moments.</p>
+          <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Studio photo" loading="lazy" decoding="async" /></a>
+          <p>I am a photographer based in the city of Miami. From a very young age, I have been passionate about art in general, with a special focus on visual arts. I like to study my clients in order to elevate my photography to the highest level. Each session is unique and exclusive, tailored to each person's preferences. I am grateful to everyone who has trusted my work and allowed me to be part of their personal story.</p>
         </div>
       </section>
 
@@ -114,7 +250,7 @@
           <header>
             <h2>Contact</h2>
           </header>
-          <p>Let's create something beautiful together. Feel free to reach out for bookings or inquiries!</p>
+          <p>You can contact me via email or phone. I'd love to hear from you!</p>
           <form method="post" action="https://formspree.io/f/xyzjedrz">
             <div class="row">
               <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
@@ -123,8 +259,8 @@
               <div class="col-12"><input type="submit" value="Send Message" /></div>
             </div>
           </form>
-          <p><strong>Email:</strong> <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br>
-             <strong>Phone:</strong> <a href="tel:17865648544">786-564-8544</a></p>
+          <p><strong>Email:</strong> reymarsphotography@gmail.com<br />
+          <strong>Phone:</strong> 786-564-8544</p>
         </div>
       </section>
     </div>
@@ -137,39 +273,11 @@
       </ul>
     </div>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon" style="width:60px;height:60px;">
+    <!-- Floating buttons -->
+    <a href="#contact" class="book-session" aria-label="Book a session">Book a Session</a>
+    <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
     </a>
-
-    <!-- Book a Session Button -->
-    <a href="#contact" class="book-session">Book a Session</a>
-
-    <!-- Styles for floating buttons -->
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-      .book-session {
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        background: #000;
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-        z-index: 1000;
-        transition: 0.3s;
-      }
-      .book-session:hover {
-        background: #444;
-      }
-    </style>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -180,12 +288,10 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Service Worker registration (optional) -->
+    <!-- Service Worker (si lo tienes en la raíz) -->
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(() => console.log('✅ Service Worker registered'))
-          .catch(err => console.log('❌ SW failed:', err));
+        navigator.serviceWorker.register('/sw.js').catch(()=>{});
       }
     </script>
   </body>
