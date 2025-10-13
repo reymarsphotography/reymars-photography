@@ -12,7 +12,7 @@
     <meta name="description" content="Reymars Photography in Miami — portraits, couples and events. Unique, emotional images that tell stories." />
     <meta name="theme-color" content="#000000">
 
-    <!-- Open Graph / Twitter (SEO social) -->
+    <!-- Open Graph / Twitter -->
     <meta property="og:title" content="Reymars Photography" />
     <meta property="og:description" content="Portraits, couples and events photography in Miami. Book your session." />
     <meta property="og:type" content="website" />
@@ -39,13 +39,15 @@
 
     <!-- Minimal styles for floating buttons -->
     <style>
-      .whatsapp-float{position:fixed;bottom:20px;right:20px;z-index:1000}
-      .whatsapp-float img{width:56px;height:56px}
-      .book-session{position:fixed;bottom:90px;right:20px;background:#000;color:#fff;padding:12px 18px;border-radius:28px;text-decoration:none;font-weight:700;z-index:1000;transition:.25s}
-      .book-session:hover{background:#333}
+      .fab { position: fixed; right: 20px; bottom: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
+      .fab a { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 28px; }
+      .book-session { background:#000; color:#fff; padding:12px 18px; }
+      .book-session:hover { background:#333; }
+      .whatsapp-float img { width:56px; height:56px; display:block; }
+      .top-btn { background: rgba(0,0,0,.85); color:#fff; padding:10px 14px; border-radius: 999px; opacity:0; pointer-events:none; transition:.25s; }
+      .top-btn.show { opacity:1; pointer-events:auto; }
       @media (max-width: 480px){
         .whatsapp-float img{width:52px;height:52px}
-        .book-session{bottom:84px}
       }
     </style>
   </head>
@@ -96,139 +98,74 @@
           </header>
           <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
 
-          <!-- NUEVAS FILAS con tus 4 fotos añadidas -->
+          <!-- Grid con TODAS tus .webp (orden variado y sin repeticiones) -->
+          <!-- FILA 1 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" />
-              </a><header><h3>Sadiel</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" />
-              </a><header><h3>Rey</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" />
-              </a><header><h3>Mari</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" /></a><header><h3>Sadiel</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" /></a><header><h3>Rey</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
           </div>
-
+          <!-- FILA 2 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/PI.webp" alt="PI portrait" loading="lazy" decoding="async" />
-              </a><header><h3>PI</h3></header></article>
-            </div>
-            <!-- Completo la fila con imágenes existentes para mantener grilla -->
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy" decoding="async" />
-              </a><header><h3>Daimer & Marilia</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key looking left" loading="lazy" decoding="async" />
-              </a><header><h3>Marilian</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/PI.webp" alt="PI portrait" loading="lazy" decoding="async" /></a><header><h3>PI</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy" decoding="async" /></a><header><h3>Daimer & Marilia</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key looking left" loading="lazy" decoding="async" /></a><header><h3>Marilia</h3></header></article></div>
           </div>
-
-          <!-- A partir de aquí, tu grilla original completa -->
+          <!-- FILA 3 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario looking to the right" loading="lazy" decoding="async" /></a><header><h3>Dario</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="Daniela seated looking right" loading="lazy" decoding="async" /></a><header><h3>Dani</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva at the window looking left" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario looking to the right" loading="lazy" decoding="async" /></a><header><h3>Dario</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="Daniela seated looking right" loading="lazy" decoding="async" /></a><header><h3>Daniela</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva by the window looking left" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
           </div>
-
+          <!-- FILA 4 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Marinalva close-up" loading="lazy" decoding="async" /></a><header><h3>Close-up</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay happy looking forward left" loading="lazy" decoding="async" /></a><header><h3>Any</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="Mari with rose looking down" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Marinalva close-up" loading="lazy" decoding="async" /></a><header><h3>Close-up</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay happy looking front-left" loading="lazy" decoding="async" /></a><header><h3>Anay</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="Mari with rose looking down" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
           </div>
-
+          <!-- FILA 5 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_feliz_centro.webp" alt="Steven smiling" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_feliz_centro.webp" alt="Steven smiling center" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading center" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
           </div>
-
+          <!-- FILA 6 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Boy with clock on the left" loading="lazy" decoding="async" /></a><header><h3>Lester</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="Jony and Stef high key" loading="lazy" decoding="async" /></a><header><h3>Jony y Stef</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity with Juli on the left" loading="lazy" decoding="async" /></a><header><h3>Juli & Stef</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Boy with clock on the left" loading="lazy" decoding="async" /></a><header><h3>Lester</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="Jony and Stef high key center" loading="lazy" decoding="async" /></a><header><h3>Jony & Stef</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity portrait with Juli on the left" loading="lazy" decoding="async" /></a><header><h3>Juli & Stef</h3></header></article></div>
           </div>
-
+          <!-- FILA 7 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity looking up right" loading="lazy" decoding="async" /></a><header><h3>Stefanie</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano to the right" loading="lazy" decoding="async" /></a><header><h3>Juli</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key looking left" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity looking up to the right" loading="lazy" decoding="async" /></a><header><h3>Stefanie</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano, right side" loading="lazy" decoding="async" /></a><header><h3>Juli</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key looking left" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
           </div>
-
+          <!-- FILA 8 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers looking right" loading="lazy" decoding="async" /></a><header><h3>Lachi</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking" loading="lazy" decoding="async" /></a><header><h3>Lachi</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenki family portrait" loading="lazy" decoding="async" /></a><header><h3>Yenkins</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers looking right" loading="lazy" decoding="async" /></a><header><h3>Lazaro</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking center" loading="lazy" decoding="async" /></a><header><h3>Lazaro</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenki family portrait center" loading="lazy" decoding="async" /></a><header><h3>Yenki Family</h3></header></article></div>
           </div>
-
+          <!-- FILA 9 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_acostada.webp" alt="Marinalva lying down" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari couple portrait" loading="lazy" decoding="async" /></a><header><h3>Rey & Mari</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva looking right" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_acostada.webp" alt="Marinalva laying down" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari couple, right side" loading="lazy" decoding="async" /></a><header><h3>Rey & Mari</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess look to the right" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
           </div>
-
+          <!-- FILA 10 -->
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela at the fountain to the left" loading="lazy" decoding="async" /></a><header><h3>Fuente</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit">
-                <!-- ✅ Corregido: sin carácter & -->
-                <img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy" decoding="async" />
-              </a><header><h3>Mari & Agustina</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela by the fountain to the left" loading="lazy" decoding="async" /></a><header><h3>Daniela</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit">
+              <!-- Corregido: sin carácter & -->
+              <img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy" decoding="async" />
+            </a><header><h3>Mari & Agustina</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Sami_bussiness_lado_derecho.webp" alt="Sami business portrait, right side" loading="lazy" decoding="async" /></a><header><h3>Sami</h3></header></article></div>
+          </div>
+          <!-- FILA 11 -->
+          <div class="row">
+            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_azul_mirando_a_la_izquierda.webp" alt="Marinalva blue outfit looking left" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
+            <!-- Últimas dos ya incluidas arriba, dejamos esta fila con una tarjeta para no duplicar -->
           </div>
         </div>
       </section>
@@ -239,7 +176,7 @@
           <header>
             <h2>About Me</h2>
           </header>
-          <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Studio photo" loading="lazy" decoding="async" /></a>
+          <a class="image featured"><img src="images/pic08.jpg" alt="Studio portrait" loading="lazy" decoding="async" /></a>
           <p>I am a photographer based in the city of Miami. From a very young age, I have been passionate about art in general, with a special focus on visual arts. I like to study my clients in order to elevate my photography to the highest level. Each session is unique and exclusive, tailored to each person's preferences. I am grateful to everyone who has trusted my work and allowed me to be part of their personal story.</p>
         </div>
       </section>
@@ -251,11 +188,11 @@
             <h2>Contact</h2>
           </header>
           <p>You can contact me via email or phone. I'd love to hear from you!</p>
-          <form method="post" action="https://formspree.io/f/xyzjedrz">
+          <form method="post" action="https://formspree.io/f/xyzjedrz" autocomplete="on">
             <div class="row">
               <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
               <div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
-              <div class="col-12"><textarea name="message" placeholder="Message" required></textarea></div>
+              <div class="col-12"><textarea name="message" placeholder="Message" required minlength="10"></textarea></div>
               <div class="col-12"><input type="submit" value="Send Message" /></div>
             </div>
           </form>
@@ -273,11 +210,14 @@
       </ul>
     </div>
 
-    <!-- Floating buttons -->
-    <a href="#contact" class="book-session" aria-label="Book a session">Book a Session</a>
-    <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
-    </a>
+    <!-- Floating Buttons -->
+    <div class="fab" role="region" aria-label="Quick actions">
+      <a href="#contact" class="book-session">Book a Session</a>
+      <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
+      <a href="#top" class="top-btn">Top</a>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -288,11 +228,22 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Service Worker (si lo tienes en la raíz) -->
+    <!-- Service Worker + Top button logic -->
     <script>
+      // SW
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(()=>{});
       }
+      // Show "Top" after scroll
+      (function(){
+        const topBtn = document.querySelector('.top-btn');
+        function onScroll(){
+          if(window.scrollY > 400) topBtn.classList.add('show');
+          else topBtn.classList.remove('show');
+        }
+        window.addEventListener('scroll', onScroll, {passive:true});
+        onScroll();
+      })();
     </script>
   </body>
 </html>
