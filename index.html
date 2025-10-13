@@ -4,7 +4,7 @@
     html5up.net | @ajlkn
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="en">
+<html lang="en" data-lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Reymars Photography | Capturing Moments in Miami</title>
@@ -28,9 +28,72 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://reymarsphotography.art/" />
 
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 
-    <!-- Google Analytics -->
+    <style>
+      .lang-switch {
+        position: absolute;
+        top: .75rem;
+        right: .75rem;
+        z-index: 1001;
+      }
+      .lang-switch select {
+        background: rgba(0,0,0,.6);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,.25);
+        border-radius: 8px;
+        padding: .35rem .6rem;
+        font-weight: 600;
+      }
+      .fab {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+      }
+      .fab a {
+        border-radius: 999px;
+        box-shadow: 0 8px 18px rgba(0,0,0,.25);
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        font-weight: 700;
+        padding: 0.9rem 1.2rem;
+        text-decoration: none;
+        color: inherit;
+      }
+      .fab .wapp-btn {
+        background: #25D366;
+        color: #fff !important;
+      }
+      .fab .top-btn {
+        background: rgba(0,0,0,.75);
+        color: #fff !important;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s ease;
+      }
+      .fab .top-btn.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      @media (min-width: 980px) {
+        .fab { right: 1.5rem; bottom: 1.5rem; }
+      }
+      .visually-hidden {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75D79E0SB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -39,7 +102,6 @@
       gtag('config', 'G-K75D79E0SB');
     </script>
 
-    <!-- JSON-LD: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,38 +124,35 @@
     }
     </script>
   </head>
+
   <body class="is-preload">
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <label for="langSelect" class="visually-hidden">Language</label>
+      <select id="langSelect">
+        <option value="en" selected>EN</option>
+        <option value="es">ES</option>
+        <option value="pt">PT</option>
+      </select>
+    </div>
+
     <!-- Header -->
     <div id="header">
       <div class="top">
-        <!-- Nav -->
-        <nav id="nav" aria-label="Primary">
+        <nav id="nav">
           <ul>
-            <li><a href="#top" id="top-link"><span class="icon solid fa-home" aria-hidden="true"></span> Intro</a></li>
-            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th" aria-hidden="true"></span> Portfolio</a></li>
-            <li><a href="#about" id="about-link"><span class="icon solid fa-user" aria-hidden="true"></span> About Me</a></li>
-            <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope" aria-hidden="true"></span> Contact</a></li>
+            <li><a href="#top" id="top-link"><span class="icon solid fa-home"></span> Intro</a></li>
+            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th"></span> Portfolio</a></li>
+            <li><a href="#about" id="about-link"><span class="icon solid fa-user"></span> About Me</a></li>
+            <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope"></span> Contact</a></li>
           </ul>
         </nav>
       </div>
       <div class="bottom">
-        <!-- Social Icons -->
         <ul class="icons">
-          <li>
-            <a href="https://www.instagram.com/reymar_s_photography/"
-               class="icon brands fa-instagram" aria-label="Instagram: Reymars Photography">
-              <span class="label">Instagram</span></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/reymarsphotography/"
-               class="icon brands fa-facebook-f" aria-label="Facebook: Reymars Photography">
-              <span class="label">Facebook</span></a>
-          </li>
-          <li>
-            <a href="mailto:reymarsphotography@gmail.com"
-               class="icon solid fa-envelope" aria-label="Email: reymarsphotography@gmail.com">
-              <span class="label">Email</span></a>
-          </li>
+          <li><a href="https://www.instagram.com/reymar_s_photography/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://www.facebook.com/reymarsphotography/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="mailto:reymarsphotography@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
       </div>
     </div>
@@ -120,135 +179,26 @@
           </header>
           <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
 
-          <!--
-            Reordenado para evitar repetición visual: mezcla de estilos, género y planos.
-            Todas las imágenes usan .webp y lazy-loading.
-          -->
-
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Sadiel.webp" alt="Portrait of Sadiel in a dark suit" loading="lazy" decoding="async" /></a><header><h3>Sadiel</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_feliz_centro.webp" alt="Steven smiling portrait" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" /></a><header><h3>Sadiel</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" /></a><header><h3>Rey</h3></header></article></div>
           </div>
 
           <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Close-up portrait of Marinalva" loading="lazy" decoding="async" /></a><header><h3>Close-up</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Rey.webp" alt="Formal portrait of Rey" loading="lazy" decoding="async" /></a><header><h3>Rey</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela by the fountain" loading="lazy" decoding="async" /></a><header><h3>Fuente</h3></header></article>
-            </div>
+            <div class="col-4 col-12-mobile"><article class="item"><a href="#" class="image fit"><img src="images/PI.webp" alt="PI artistic portrait" loading="lazy" decoding="async" /></a><header><h3>PI</h3></header></article></div>
           </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="High key couple portrait Jony and Stef" loading="lazy" decoding="async" /></a><header><h3>Jony y Stef</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay happy looking left" loading="lazy" decoding="async" /></a><header><h3>Any</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/PI.webp" alt="Artistic portrait PI" loading="lazy" decoding="async" /></a><header><h3>PI</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity portrait looking up to the right" loading="lazy" decoding="async" /></a><header><h3>Stefanie</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario looking to the right" loading="lazy" decoding="async" /></a><header><h3>Dario</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva by the window looking left" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers" loading="lazy" decoding="async" /></a><header><h3>Lachi</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy" decoding="async" /></a><header><h3>Daimer & Marilia</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano" loading="lazy" decoding="async" /></a><header><h3>Juli</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key looking left" loading="lazy" decoding="async" /></a><header><h3>Marilian</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity couple portrait Juli & Stef" loading="lazy" decoding="async" /></a><header><h3>Juli & Stef</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Sami_bussiness_lado_derecho.webp" alt="Sami business portrait" loading="lazy" decoding="async" /></a><header><h3>Sami</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Family portrait at center" loading="lazy" decoding="async" /></a><header><h3>Yenkins</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_acostada.webp" alt="Marinalva laying down" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari couple portrait" loading="lazy" decoding="async" /></a><header><h3>Rey & Mari</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key looking left" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Boy with clock on the left side" loading="lazy" decoding="async" /></a><header><h3>Lester</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Mari_&_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy" decoding="async" /></a><header><h3>Mari & Agustina</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-              <article class="item"><a href="#" class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess look to the right" loading="lazy" decoding="async" /></a><header><h3>Nalva</h3></header></article>
-            </div>
-          </div>
-
         </div>
       </section>
 
-      <!-- About Me -->
+      <!-- About -->
       <section id="about" class="three">
         <div class="container">
           <header>
             <h2>About Me</h2>
           </header>
           <a href="#" class="image featured"><img src="images/pic08.jpg" alt="Photographer portrait" loading="lazy" decoding="async" /></a>
-          <p>
-            I am a photographer based in the city of Miami. From a very young age, I have been passionate about art in
-            general, with a special focus on visual arts. I like to study my clients in order to elevate my photography
-            to the highest level. Each session is unique and exclusive, tailored to each person's preferences. I am
-            grateful to everyone who has trusted my work and allowed me to be part of their personal story.
-          </p>
+          <p>I am a photographer based in Miami. I have always been passionate about art, especially visual arts. I study my clients to elevate photography to the highest level. Each session is unique and exclusive, tailored to each person’s style and preferences.</p>
         </div>
       </section>
 
@@ -259,39 +209,33 @@
             <h2>Contact</h2>
           </header>
           <p>You can contact me via email or phone. I'd love to hear from you!</p>
-          <form method="post" action="https://formspree.io/f/xyzjedrz" autocomplete="on">
-            <!-- Honeypot anti-spam -->
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+          <form method="post" action="https://formspree.io/f/xyzjedrz">
             <div class="row">
-              <div class="col-6 col-12-mobile">
-                <input type="text" name="name" placeholder="Name" required autocomplete="name" />
-              </div>
-              <div class="col-6 col-12-mobile">
-                <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-              </div>
-              <div class="col-12">
-                <textarea name="message" placeholder="Message" required minlength="10"></textarea>
-              </div>
-              <div class="col-12">
-                <input type="submit" value="Send Message" />
-              </div>
+              <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" required /></div>
+              <div class="col-6 col-12-mobile"><input type="email" name="email" placeholder="Email" required /></div>
+              <div class="col-12"><textarea name="message" placeholder="Message" required></textarea></div>
+              <div class="col-12"><input type="submit" value="Send Message" /></div>
             </div>
           </form>
-          <p>
-            <strong>Email:</strong> reymarsphotography@gmail.com<br />
-            <strong>Phone:</strong> 786-564-8544
-          </p>
+          <p><strong>Email:</strong> reymarsphotography@gmail.com<br />
+          <strong>Phone:</strong> 786-564-8544</p>
         </div>
       </section>
     </div>
 
     <!-- Footer -->
     <div id="footer">
-      <!-- Copyright -->
       <ul class="copyright">
         <li>© Reymars Photography. All rights reserved.</li>
         <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
       </ul>
+    </div>
+
+    <!-- Floating buttons -->
+    <div class="fab">
+      <a href="#contact" class="button scrolly"><span class="icon solid fa-calendar-check"></span> Book a Session</a>
+      <a id="whatsappBtn" class="wapp-btn" href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I%27d%20like%20to%20book%20a%20photoshoot." target="_blank" rel="noopener"><span class="icon brands fa-whatsapp"></span> WhatsApp</a>
+      <a href="#top" class="top-btn scrolly"><span class="icon solid fa-arrow-up"></span> Top</a>
     </div>
 
     <!-- Scripts -->
@@ -302,5 +246,12 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      const topBtn = document.querySelector(".top-btn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) topBtn.classList.add("show");
+        else topBtn.classList.remove("show");
+      });
+    </script>
   </body>
 </html>
