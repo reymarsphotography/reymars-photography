@@ -1,25 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-    REYMAR'S Photography
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-    Production build — optimized for SEO, a11y, performance & security.
--->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Reymars Photography | Capturing Moments in Miami</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Reymars Photography in Miami — portraits, couples, maternity and events. Unique, emotional images that tell stories. Book your session today." />
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A0A0A" />
     <meta name="format-detection" content="telephone=no" />
 
-    <!-- Indexing -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://reymarsphotography.art/" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Reymars Photography" />
     <meta property="og:locale" content="en_US" />
@@ -29,28 +20,22 @@
     <meta property="og:image" content="https://reymarsphotography.art/images/pic08.jpg" />
     <meta property="og:image:alt" content="Reymars Photography — portrait session in Miami" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Reymars Photography | Capturing Moments in Miami" />
     <meta name="twitter:description" content="Portraits, couples, maternity and events photography in Miami. Book your session." />
     <meta name="twitter:image" content="https://reymarsphotography.art/images/pic08.jpg" />
 
-    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-    <link rel="dns-prefetch" href="https://formspree.io" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!-- Manifest & Icons -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-180.png">
     <link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192.png">
     <link rel="apple-touch-icon" sizes="512x512" href="images/icons/icon-512.png">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K75D79E0SB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -59,7 +44,6 @@
       gtag('config', 'G-K75D79E0SB', { anonymize_ip: true });
     </script>
 
-    <!-- Structured data: Local Business -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -105,214 +89,739 @@
     }
     </script>
 
-    <!-- Minimal critical styles -->
     <style>
-      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-      .skip-link{position:absolute;left:-9999px;top:0;background:#000;color:#fff;padding:10px 16px;z-index:2000;border-radius:0 0 8px 0;font-weight:700}
-      .skip-link:focus{left:0}
-      .fab{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;flex-direction:column;gap:12px}
-      .fab a{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;font-weight:700;border-radius:28px}
-      .book-session{background:#000;color:#fff;padding:12px 18px}
-      .book-session:hover{background:#333}
-      .whatsapp-float img{width:56px;height:56px;display:block}
-      .top-btn{background:rgba(0,0,0,.85);color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s}
-      .top-btn.show{opacity:1;pointer-events:auto}
-      @media (max-width:480px){.whatsapp-float img{width:52px;height:52px}}
-      @media (prefers-reduced-motion: reduce){
-        *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+      :root {
+        --bg: #0A0A0A;
+        --bg-2: #131313;
+        --bg-3: #1A1A1A;
+        --text: #F5F5F0;
+        --muted: #8A8A8A;
+        --dim: #5A5A5A;
+        --accent: #B89B72;
+        --border: #242424;
+        --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+        --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      img { max-width: 100%; height: auto; display: block; }
+      a { color: inherit; text-decoration: none; transition: color .3s; }
+      a:hover { color: var(--accent); }
+      button { font: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+      ::selection { background: var(--accent); color: var(--bg); }
+
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+      .skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: var(--bg); padding: 10px 16px; z-index: 9999; font-weight: 500; }
+      .skip-link:focus { left: 0; }
+
+      /* NAV */
+      .nav {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 20px 40px;
+        transition: background .4s, padding .4s, backdrop-filter .4s;
+      }
+      .nav.scrolled { background: rgba(10,10,10,.85); backdrop-filter: blur(20px); padding: 14px 40px; border-bottom: 1px solid var(--border); }
+      .nav-logo { font-family: var(--serif); font-size: 20px; letter-spacing: .04em; font-weight: 500; }
+      .nav-logo span { color: var(--accent); }
+      .nav-links { display: flex; gap: 32px; list-style: none; }
+      .nav-links a { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+      .nav-links a:hover { color: var(--text); }
+      @media (max-width: 768px) {
+        .nav { padding: 16px 20px; }
+        .nav.scrolled { padding: 12px 20px; }
+        .nav-links { gap: 18px; }
+        .nav-links a { font-size: 11px; letter-spacing: .08em; }
+        .nav-logo { font-size: 16px; }
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex; align-items: center; justify-content: center;
+        text-align: center;
+        padding: 120px 24px 80px;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute; inset: 0; z-index: -2;
+        background-image: url('images/Mari.webp');
+        background-size: cover; background-position: center 30%;
+        filter: brightness(.35) contrast(1.1);
+      }
+      .hero::after {
+        content: ''; position: absolute; inset: 0; z-index: -1;
+        background: linear-gradient(to bottom, rgba(10,10,10,.6) 0%, rgba(10,10,10,.3) 40%, rgba(10,10,10,.95) 100%);
+      }
+      .hero-inner { max-width: 900px; }
+      .hero-eyebrow {
+        font-size: 11px; letter-spacing: .4em; text-transform: uppercase;
+        color: var(--accent); margin-bottom: 28px;
+      }
+      .hero-title {
+        font-family: var(--serif); font-weight: 300; font-style: italic;
+        font-size: clamp(3.2rem, 9vw, 7rem);
+        line-height: .95; letter-spacing: -.02em;
+        margin-bottom: 28px;
+      }
+      .hero-title strong { font-weight: 500; font-style: normal; display: block; }
+      .hero-sub {
+        font-size: 14px; letter-spacing: .18em; text-transform: uppercase;
+        color: var(--muted); margin-bottom: 48px;
+      }
+      .hero-sub span { color: var(--dim); margin: 0 10px; }
+      .hero-cta {
+        display: inline-block;
+        padding: 14px 32px;
+        border: 1px solid var(--text);
+        font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+        transition: background .3s, color .3s, border-color .3s;
+      }
+      .hero-cta:hover { background: var(--text); color: var(--bg); }
+      .hero-scroll {
+        position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+        font-size: 10px; letter-spacing: .3em; text-transform: uppercase;
+        color: var(--dim); animation: bounce 2.5s ease-in-out infinite;
+      }
+      @keyframes bounce { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,8px)} }
+
+      /* FILM STRIP */
+      .film-strip {
+        overflow: hidden;
+        background: var(--bg);
+        padding: 40px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .film-strip-track {
+        display: flex; gap: 16px;
+        width: max-content;
+        animation: filmScroll 60s linear infinite;
+      }
+      .film-strip:hover .film-strip-track { animation-play-state: paused; }
+      .film-strip-track img {
+        height: 260px; width: auto;
+        object-fit: cover;
+        filter: grayscale(20%) brightness(.9);
+        transition: filter .4s;
+      }
+      .film-strip-track img:hover { filter: grayscale(0%) brightness(1); }
+      @keyframes filmScroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      @media (max-width: 768px) {
+        .film-strip { padding: 24px 0; }
+        .film-strip-track img { height: 180px; }
+      }
+
+      /* SECTION COMMON */
+      .section { padding: 120px 40px; }
+      .section-narrow { max-width: 1200px; margin: 0 auto; }
+      .section-head { text-align: center; margin-bottom: 72px; }
+      .section-eyebrow {
+        font-size: 11px; letter-spacing: .35em; text-transform: uppercase;
+        color: var(--accent); margin-bottom: 16px;
+      }
+      .section-title {
+        font-family: var(--serif); font-weight: 400;
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        line-height: 1.1; letter-spacing: -.01em;
+      }
+      .section-title em { font-style: italic; font-weight: 300; }
+      .section-lead {
+        font-size: 15px; color: var(--muted);
+        max-width: 620px; margin: 20px auto 0;
+      }
+      @media (max-width: 768px) { .section { padding: 80px 20px; } }
+
+      /* REVEAL ANIMATION */
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+      .reveal.visible { opacity: 1; transform: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { opacity: 1; transform: none; transition: none; }
+        .film-strip-track { animation: none; }
+        .hero-scroll { animation: none; }
+        html { scroll-behavior: auto; }
+      }
+
+      /* PORTFOLIO GRID */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .grid-item {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 3/4;
+        background: var(--bg-3);
+      }
+      .grid-item img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        transition: transform .8s cubic-bezier(.2,.8,.2,1), filter .4s;
+      }
+      .grid-item:hover img { transform: scale(1.06); filter: brightness(.7); }
+      .grid-caption {
+        position: absolute; inset: auto 0 0 0;
+        padding: 24px;
+        font-family: var(--serif); font-size: 18px; font-weight: 500;
+        text-align: left;
+        opacity: 0; transform: translateY(8px);
+        transition: opacity .4s, transform .4s;
+        background: linear-gradient(to top, rgba(10,10,10,.9), transparent);
+      }
+      .grid-item:hover .grid-caption { opacity: 1; transform: none; }
+      @media (max-width: 768px) {
+        .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .grid-caption { opacity: 1; transform: none; font-size: 14px; padding: 12px; }
+      }
+
+      /* ABOUT */
+      .about { background: var(--bg-2); }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .about-image { aspect-ratio: 3/4; overflow: hidden; }
+      .about-image img { width: 100%; height: 100%; object-fit: cover; }
+      .about-text p {
+        font-size: 16px; color: var(--muted);
+        margin-bottom: 20px; line-height: 1.8;
+      }
+      .about-text p:first-of-type {
+        font-family: var(--serif); font-size: 24px; font-weight: 300;
+        color: var(--text); line-height: 1.4;
+        margin-bottom: 28px;
+      }
+      .about-specialties {
+        margin-top: 32px; padding-top: 32px;
+        border-top: 1px solid var(--border);
+        display: flex; flex-wrap: wrap; gap: 12px 24px;
+      }
+      .about-specialties span {
+        font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+        color: var(--accent);
+      }
+      @media (max-width: 768px) {
+        .about-grid { grid-template-columns: 1fr; gap: 40px; }
+        .about-text p:first-of-type { font-size: 20px; }
+      }
+
+      /* SESSIONS / PRICING */
+      .sessions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .session-card {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        padding: 48px 32px;
+        display: flex; flex-direction: column;
+        transition: border-color .3s, transform .3s;
+      }
+      .session-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+      .session-card h3 {
+        font-family: var(--serif); font-weight: 400;
+        font-size: 28px; margin-bottom: 8px;
+      }
+      .session-card .price {
+        font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+        color: var(--accent); margin-bottom: 32px;
+      }
+      .session-card ul { list-style: none; margin-bottom: 32px; flex-grow: 1; }
+      .session-card ul li {
+        font-size: 14px; color: var(--muted);
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        display: flex; justify-content: space-between; gap: 16px;
+      }
+      .session-card ul li:last-child { border-bottom: none; }
+      .session-card ul li strong { color: var(--text); font-weight: 400; }
+      .session-card .btn {
+        display: inline-block; text-align: center;
+        padding: 14px 24px;
+        border: 1px solid var(--border);
+        font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+        transition: background .3s, border-color .3s, color .3s;
+      }
+      .session-card .btn:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+      @media (max-width: 900px) {
+        .sessions-grid { grid-template-columns: 1fr; }
+      }
+
+      /* FAQ */
+      .faq-list { max-width: 800px; margin: 0 auto; }
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+      }
+      .faq-item details { padding: 8px 0; }
+      .faq-item summary {
+        padding: 24px 0;
+        font-family: var(--serif); font-size: 22px; font-weight: 400;
+        cursor: pointer; list-style: none;
+        display: flex; justify-content: space-between; align-items: center;
+        transition: color .3s;
+      }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary::after {
+        content: '+'; font-family: var(--sans); font-size: 24px; font-weight: 300;
+        color: var(--accent); transition: transform .3s;
+      }
+      .faq-item details[open] summary::after { transform: rotate(45deg); }
+      .faq-item summary:hover { color: var(--accent); }
+      .faq-item p {
+        padding: 0 0 24px; color: var(--muted); font-size: 15px; line-height: 1.7;
+      }
+
+      /* CONTACT */
+      .contact { background: var(--bg-2); }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+      .contact-info h3 {
+        font-family: var(--serif); font-weight: 400;
+        font-size: 32px; margin-bottom: 20px;
+      }
+      .contact-info p { color: var(--muted); margin-bottom: 32px; }
+      .contact-info dl { display: grid; gap: 20px; }
+      .contact-info dt {
+        font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+        color: var(--accent); margin-bottom: 4px;
+      }
+      .contact-info dd { font-size: 17px; }
+      .contact-info dd a:hover { color: var(--accent); }
+
+      .contact-form { display: grid; gap: 16px; }
+      .contact-form label {
+        font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+        color: var(--muted); margin-bottom: 6px; display: block;
+      }
+      .contact-form input, .contact-form textarea {
+        width: 100%;
+        background: transparent;
+        border: none; border-bottom: 1px solid var(--border);
+        padding: 12px 0;
+        font-family: var(--sans); font-size: 16px; color: var(--text);
+        transition: border-color .3s;
+      }
+      .contact-form input:focus, .contact-form textarea:focus {
+        outline: none; border-bottom-color: var(--accent);
+      }
+      .contact-form textarea { resize: vertical; min-height: 100px; }
+      .contact-form button {
+        margin-top: 16px; padding: 16px 32px;
+        border: 1px solid var(--text);
+        font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
+        transition: background .3s, color .3s;
+        justify-self: start;
+      }
+      .contact-form button:hover { background: var(--text); color: var(--bg); }
+      @media (max-width: 768px) {
+        .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      }
+
+      /* FOOTER */
+      .footer {
+        padding: 40px;
+        border-top: 1px solid var(--border);
+        display: flex; justify-content: space-between; align-items: center;
+        flex-wrap: wrap; gap: 16px;
+        font-size: 12px; letter-spacing: .1em; color: var(--dim);
+      }
+      .footer a:hover { color: var(--text); }
+      .footer-social { display: flex; gap: 24px; }
+
+      /* FAB */
+      .fab {
+        position: fixed; right: 24px; bottom: 24px; z-index: 90;
+        display: flex; flex-direction: column; gap: 12px;
+        align-items: flex-end;
+      }
+      .fab-book {
+        background: var(--text); color: var(--bg);
+        padding: 14px 24px;
+        font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+        font-weight: 500;
+        transition: background .3s;
+      }
+      .fab-book:hover { background: var(--accent); color: var(--bg); }
+      .fab-wa {
+        width: 52px; height: 52px;
+        background: var(--text); color: var(--bg);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        transition: background .3s;
+      }
+      .fab-wa:hover { background: var(--accent); color: var(--bg); }
+      .fab-wa svg { width: 24px; height: 24px; }
+      @media (max-width: 480px) {
+        .fab { right: 16px; bottom: 16px; }
+        .fab-book { padding: 12px 18px; font-size: 10px; }
+        .fab-wa { width: 48px; height: 48px; }
+      }
+
+      /* LIGHTBOX */
+      .lightbox {
+        border: none; background: transparent; padding: 0;
+        max-width: 95vw; max-height: 95vh;
+      }
+      .lightbox::backdrop {
+        background: rgba(0,0,0,.96);
+        backdrop-filter: blur(8px);
+      }
+      .lightbox img {
+        max-width: 95vw; max-height: 90vh; display: block;
+        margin: 0 auto;
+      }
+      .lightbox-close {
+        position: fixed; top: 20px; right: 20px;
+        width: 44px; height: 44px;
+        font-size: 28px; color: var(--text);
+        display: flex; align-items: center; justify-content: center;
+        transition: color .3s;
+      }
+      .lightbox-close:hover { color: var(--accent); }
+      .lightbox-caption {
+        text-align: center; padding: 16px; color: var(--muted);
+        font-family: var(--serif); font-size: 18px;
       }
     </style>
   </head>
-
-  <body class="is-preload">
-    <script>setTimeout(function(){document.body.classList.remove('is-preload');},2500);</script>
-    <noscript><style>body.is-preload #header,body.is-preload #main,body.is-preload #footer{opacity:1!important}</style></noscript>
-
+  <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
-    <div id="header">
-      <div class="top">
-        <nav id="nav" aria-label="Primary navigation">
-          <ul>
-            <li><a href="#top" id="top-link" aria-label="Intro section"><span class="icon solid fa-home">Intro</span></a></li>
-            <li><a href="#portfolio" id="portfolio-link" aria-label="Portfolio section"><span class="icon solid fa-th">Portfolio</span></a></li>
-            <li><a href="#about" id="about-link" aria-label="About section"><span class="icon solid fa-user">About Me</span></a></li>
-            <li><a href="#contact" id="contact-link" aria-label="Contact section"><span class="icon solid fa-envelope">Contact</span></a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="bottom">
-        <ul class="icons" aria-label="Social links">
-          <li><a href="https://www.instagram.com/reymar_s_photography/" class="icon brands fa-instagram" rel="noopener" aria-label="Instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.facebook.com/reymarsphotography/" class="icon brands fa-facebook-f" rel="noopener" aria-label="Facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="mailto:reymarsphotography@gmail.com" class="icon solid fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Main -->
-    <div id="main">
-      <section id="top" class="one dark cover">
-        <div class="container">
-          <header>
-            <h1 class="alt" style="font-size:1em;margin:0">Hi! I'm <strong>Reymars Photography</strong>.</h1>
-            <p class="sr-only">Professional portrait, couples, maternity and event photographer based in Miami, Florida.</p>
-          </header>
-          <footer>
-            <a href="#portfolio" class="button scrolly">See My Work</a>
-          </footer>
-        </div>
-      </section>
-
-      <section id="portfolio" class="two">
-        <div class="container">
-          <header><h2>Portfolio</h2></header>
-          <p>I love creating unique and emotional images that tell stories. Here are some of my favorite shots:</p>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy" decoding="async" /></a><header><h3>Sadiel</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy" decoding="async" /></a><header><h3>Daimer & Marilia</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key looking left" loading="lazy" decoding="async" /></a><header><h3>Marilia</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="Daniela seated looking right" loading="lazy" decoding="async" /></a><header><h3>Daniela</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario looking to the right" loading="lazy" decoding="async" /></a><header><h3>Dario</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva by the window looking left" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay happy looking front-left" loading="lazy" decoding="async" /></a><header><h3>Anay</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="Mari with rose looking down" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_feliz_centro.webp" alt="Steven smiling center" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Rey.webp" alt="Rey portrait" loading="lazy" decoding="async" /></a><header><h3>Rey</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy" decoding="async" /></a><header><h3>Mari</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Boy with clock on the left" loading="lazy" decoding="async" /></a><header><h3>Lester</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/jony_y_stef_hig_key_centro.webp" alt="Jony and Stef high key center" loading="lazy" decoding="async" /></a><header><h3>Jony & Stef</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity portrait with Juli on the left" loading="lazy" decoding="async" /></a><header><h3>Juli & Stef</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity looking up to the right" loading="lazy" decoding="async" /></a><header><h3>Stefanie</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano, right side" loading="lazy" decoding="async" /></a><header><h3>Juli</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key looking left" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers looking right" loading="lazy" decoding="async" /></a><header><h3>Lazaro</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro smoking center" loading="lazy" decoding="async" /></a><header><h3>Lazaro</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/PI.webp" alt="PI portrait" loading="lazy" decoding="async" /></a><header><h3>PI</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Familia_yenki_centro.webp" alt="Yenki family portrait center" loading="lazy" decoding="async" /></a><header><h3>Yenki Family</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_acostada.webp" alt="Marinalva laying down" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari couple, right side" loading="lazy" decoding="async" /></a><header><h3>Rey & Mari</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess look to the right" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela by the fountain to the left" loading="lazy" decoding="async" /></a><header><h3>Daniela</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina portrait" loading="lazy" decoding="async" /></a><header><h3>Mari & Agustina</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Sami_bussiness_lado_derecho.webp" alt="Sami business portrait, right side" loading="lazy" decoding="async" /></a><header><h3>Sami</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Marinalva close-up" loading="lazy" decoding="async" /></a><header><h3>Close-up</h3></header></article></div>
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Marinalva_azul_mirando_a_la_izquierda.webp" alt="Marinalva blue outfit looking left" loading="lazy" decoding="async" /></a><header><h3>Marinalva</h3></header></article></div>
-          </div>
-
-          <div class="row">
-            <div class="col-4 col-12-mobile"><article class="item"><a class="image fit"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading center" loading="lazy" decoding="async" /></a><header><h3>Steven</h3></header></article></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="three">
-        <div class="container">
-          <header><h2>About Me</h2></header>
-          <a class="image featured"><img src="images/pic08.jpg" alt="Reymars Photography studio portrait" loading="lazy" decoding="async" /></a>
-          <p>I am a photographer based in the city of Miami. From a very young age, I have been passionate about art in general, with a special focus on visual arts. I like to study my clients in order to elevate my photography to the highest level. Each session is unique and exclusive, tailored to each person's preferences. I am grateful to everyone who has trusted my work and allowed me to be part of their personal story.</p>
-          <p>Specialties: portrait, couples, maternity and event photography across Miami, Miami Beach, Doral and Hialeah.</p>
-          <p><a href="#contact" class="button">Book a Session</a></p>
-        </div>
-      </section>
-
-      <section id="contact" class="four">
-        <div class="container">
-          <header><h2>Contact</h2></header>
-          <p>You can contact me via email or phone. I'd love to hear from you!</p>
-          <form method="post" action="https://formspree.io/f/xyzjedrz" autocomplete="on">
-            <input type="hidden" name="_subject" value="New message from reymarsphotography.art" />
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
-            <div class="row">
-              <div class="col-6 col-12-mobile">
-                <label for="name" class="sr-only">Your name</label>
-                <input id="name" type="text" name="name" placeholder="Name" required autocomplete="name" />
-              </div>
-              <div class="col-6 col-12-mobile">
-                <label for="email" class="sr-only">Your email</label>
-                <input id="email" type="email" name="email" placeholder="Email" required autocomplete="email" />
-              </div>
-              <div class="col-12">
-                <label for="message" class="sr-only">Your message</label>
-                <textarea id="message" name="message" placeholder="Message" required minlength="10"></textarea>
-              </div>
-              <div class="col-12"><input type="submit" value="Send Message" /></div>
-            </div>
-          </form>
-          <p>
-            <strong>Email:</strong> <a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a><br />
-            <strong>Phone:</strong> <a href="tel:+17865648544">786-564-8544</a>
-          </p>
-        </div>
-      </section>
-    </div>
-
-    <div id="footer">
-      <ul class="copyright">
-        <li>© Reymars Photography. All rights reserved.</li>
-        <li>Design: <a href="http://html5up.net" rel="noopener">HTML5 UP</a></li>
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav-logo">Reymars<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#sessions">Sessions</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="fab" role="region" aria-label="Quick actions">
-      <a href="#contact" class="book-session">Book a Session</a>
-      <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="56" height="56" />
+    <main id="main">
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="hero-bg" role="img" aria-label="Portrait session in Miami"></div>
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Miami · Est. 2018</p>
+          <h1 class="hero-title">
+            Capturing <em>moments</em>
+            <strong>that tell stories.</strong>
+          </h1>
+          <p class="hero-sub">Portrait <span>·</span> Couples <span>·</span> Maternity <span>·</span> Events</p>
+          <a href="#portfolio" class="hero-cta">View Portfolio</a>
+        </div>
+        <div class="hero-scroll">Scroll ↓</div>
+      </section>
+
+      <!-- FILM STRIP -->
+      <div class="film-strip" aria-hidden="true">
+        <div class="film-strip-track">
+          <img src="images/Mari.webp" alt="" loading="lazy" />
+          <img src="images/Rey.webp" alt="" loading="lazy" />
+          <img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="" loading="lazy" />
+          <img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="" loading="lazy" />
+          <img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="" loading="lazy" />
+          <img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="" loading="lazy" />
+          <img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="" loading="lazy" />
+          <img src="images/Mari_and_Agustina.webp" alt="" loading="lazy" />
+          <!-- duplicate for seamless loop -->
+          <img src="images/Mari.webp" alt="" loading="lazy" />
+          <img src="images/Rey.webp" alt="" loading="lazy" />
+          <img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="" loading="lazy" />
+          <img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="" loading="lazy" />
+          <img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="" loading="lazy" />
+          <img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="" loading="lazy" />
+          <img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="" loading="lazy" />
+          <img src="images/Mari_and_Agustina.webp" alt="" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="section">
+        <div class="section-narrow">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Selected Work</p>
+            <h2 class="section-title">A collection of <em>moments</em>.</h2>
+            <p class="section-lead">Each image tells a story. These are some of my favorites — portraits, couples and editorial sessions from across Miami.</p>
+          </header>
+
+          <div class="portfolio-grid">
+            <button class="grid-item reveal" data-full="images/Sadiel.webp"><img src="images/Sadiel.webp" alt="Sadiel portrait" loading="lazy"><span class="grid-caption">Sadiel</span></button>
+            <button class="grid-item reveal" data-full="images/Mari.webp"><img src="images/Mari.webp" alt="Mari portrait" loading="lazy"><span class="grid-caption">Mari</span></button>
+            <button class="grid-item reveal" data-full="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp"><img src="images/Daimer_y_Marilia_mirandose_uno_al_otro_en_el_centro.webp" alt="Daimer and Marilia looking at each other" loading="lazy"><span class="grid-caption">Daimer &amp; Marilia</span></button>
+            <button class="grid-item reveal" data-full="images/Marilia_Low_key_mirando_a_la_izquierda.webp"><img src="images/Marilia_Low_key_mirando_a_la_izquierda.webp" alt="Marilia low key" loading="lazy"><span class="grid-caption">Marilia</span></button>
+            <button class="grid-item reveal" data-full="images/Daniela_sentada_mirando_a_la_derecha.webp"><img src="images/Daniela_sentada_mirando_a_la_derecha.webp" alt="Daniela seated" loading="lazy"><span class="grid-caption">Daniela</span></button>
+            <button class="grid-item reveal" data-full="images/Dario_mirando_a_la_derecha.webp"><img src="images/Dario_mirando_a_la_derecha.webp" alt="Dario" loading="lazy"><span class="grid-caption">Dario</span></button>
+            <button class="grid-item reveal" data-full="images/Marinalva_ventana_mirando_a_la_izquierda.webp"><img src="images/Marinalva_ventana_mirando_a_la_izquierda.webp" alt="Marinalva by the window" loading="lazy"><span class="grid-caption">Marinalva</span></button>
+            <button class="grid-item reveal" data-full="images/Anay_Feliz_mirando_al_frente_izquierdo.webp"><img src="images/Anay_Feliz_mirando_al_frente_izquierdo.webp" alt="Anay" loading="lazy"><span class="grid-caption">Anay</span></button>
+            <button class="grid-item reveal" data-full="images/Mari_rosa_mirando_centro_abajo.webp"><img src="images/Mari_rosa_mirando_centro_abajo.webp" alt="Mari with rose" loading="lazy"><span class="grid-caption">Mari</span></button>
+            <button class="grid-item reveal" data-full="images/Steven_feliz_centro.webp"><img src="images/Steven_feliz_centro.webp" alt="Steven" loading="lazy"><span class="grid-caption">Steven</span></button>
+            <button class="grid-item reveal" data-full="images/Rey.webp"><img src="images/Rey.webp" alt="Rey" loading="lazy"><span class="grid-caption">Rey</span></button>
+            <button class="grid-item reveal" data-full="images/Mari_jirasoles_centro.webp"><img src="images/Mari_jirasoles_centro.webp" alt="Mari with sunflowers" loading="lazy"><span class="grid-caption">Mari</span></button>
+            <button class="grid-item reveal" data-full="images/Nino_reloj_del_lado_izquierdo.webp"><img src="images/Nino_reloj_del_lado_izquierdo.webp" alt="Lester" loading="lazy"><span class="grid-caption">Lester</span></button>
+            <button class="grid-item reveal" data-full="images/jony_y_stef_hig_key_centro.webp"><img src="images/jony_y_stef_hig_key_centro.webp" alt="Jony &amp; Stef" loading="lazy"><span class="grid-caption">Jony &amp; Stef</span></button>
+            <button class="grid-item reveal" data-full="images/Embarazo_y_Juli_del_lado_izquierdo.webp"><img src="images/Embarazo_y_Juli_del_lado_izquierdo.webp" alt="Maternity with Juli" loading="lazy"><span class="grid-caption">Juli &amp; Stef</span></button>
+            <button class="grid-item reveal" data-full="images/Embarazo_arriba_lado_derecho.webp"><img src="images/Embarazo_arriba_lado_derecho.webp" alt="Maternity" loading="lazy"><span class="grid-caption">Stefanie</span></button>
+            <button class="grid-item reveal" data-full="images/Juli_piano_lado_derecho.webp"><img src="images/Juli_piano_lado_derecho.webp" alt="Juli at the piano" loading="lazy"><span class="grid-caption">Juli</span></button>
+            <button class="grid-item reveal" data-full="images/Steven_Low_key_mirando_a_la_izquierda.webp"><img src="images/Steven_Low_key_mirando_a_la_izquierda.webp" alt="Steven low key" loading="lazy"><span class="grid-caption">Steven</span></button>
+            <button class="grid-item reveal" data-full="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp"><img src="images/Lazaro_flores_rojas_mirando_a_la_derecha.webp" alt="Lazaro with red flowers" loading="lazy"><span class="grid-caption">Lazaro</span></button>
+            <button class="grid-item reveal" data-full="images/Lazaro_smoking_centro.webp"><img src="images/Lazaro_smoking_centro.webp" alt="Lazaro" loading="lazy"><span class="grid-caption">Lazaro</span></button>
+            <button class="grid-item reveal" data-full="images/PI.webp"><img src="images/PI.webp" alt="PI" loading="lazy"><span class="grid-caption">PI</span></button>
+            <button class="grid-item reveal" data-full="images/Familia_yenki_centro.webp"><img src="images/Familia_yenki_centro.webp" alt="Yenki family" loading="lazy"><span class="grid-caption">Yenki Family</span></button>
+            <button class="grid-item reveal" data-full="images/Marinalva_acostada.webp"><img src="images/Marinalva_acostada.webp" alt="Marinalva" loading="lazy"><span class="grid-caption">Marinalva</span></button>
+            <button class="grid-item reveal" data-full="images/Rey_y_Mari_del_lado_derecho.webp"><img src="images/Rey_y_Mari_del_lado_derecho.webp" alt="Rey and Mari" loading="lazy"><span class="grid-caption">Rey &amp; Mari</span></button>
+            <button class="grid-item reveal" data-full="images/Marinalva_princesa_mirando_a_la_derecha.webp"><img src="images/Marinalva_princesa_mirando_a_la_derecha.webp" alt="Marinalva princess" loading="lazy"><span class="grid-caption">Marinalva</span></button>
+            <button class="grid-item reveal" data-full="images/Daniela_Fuente_izquierda.webp"><img src="images/Daniela_Fuente_izquierda.webp" alt="Daniela by the fountain" loading="lazy"><span class="grid-caption">Daniela</span></button>
+            <button class="grid-item reveal" data-full="images/Mari_and_Agustina.webp"><img src="images/Mari_and_Agustina.webp" alt="Mari and Agustina" loading="lazy"><span class="grid-caption">Mari &amp; Agustina</span></button>
+            <button class="grid-item reveal" data-full="images/Sami_bussiness_lado_derecho.webp"><img src="images/Sami_bussiness_lado_derecho.webp" alt="Sami" loading="lazy"><span class="grid-caption">Sami</span></button>
+            <button class="grid-item reveal" data-full="images/Marinalva_Princesa_close_up_centro.webp"><img src="images/Marinalva_Princesa_close_up_centro.webp" alt="Marinalva close-up" loading="lazy"><span class="grid-caption">Close-up</span></button>
+            <button class="grid-item reveal" data-full="images/Marinalva_azul_mirando_a_la_izquierda.webp"><img src="images/Marinalva_azul_mirando_a_la_izquierda.webp" alt="Marinalva in blue" loading="lazy"><span class="grid-caption">Marinalva</span></button>
+            <button class="grid-item reveal" data-full="images/Steven_leyendo_centro.webp"><img src="images/Steven_leyendo_centro.webp" alt="Steven reading" loading="lazy"><span class="grid-caption">Steven</span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="section-narrow">
+          <div class="about-grid">
+            <div class="about-image reveal">
+              <img src="images/pic08.jpg" alt="Reymars Photography studio portrait" loading="lazy">
+            </div>
+            <div class="about-text reveal">
+              <p class="section-eyebrow">About</p>
+              <h2 class="section-title" style="margin-bottom:32px">The eye behind <em>the lens</em>.</h2>
+              <p>I am a photographer based in Miami. From a very young age, I have been passionate about art in general, with a special focus on visual arts.</p>
+              <p>I like to study my clients in order to elevate my photography to the highest level. Each session is unique and exclusive, tailored to each person's preferences.</p>
+              <p>I am grateful to everyone who has trusted my work and allowed me to be part of their personal story.</p>
+              <div class="about-specialties">
+                <span>Portrait</span>
+                <span>Couples</span>
+                <span>Maternity</span>
+                <span>Events</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SESSIONS -->
+      <section id="sessions" class="section">
+        <div class="section-narrow">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">Sessions</p>
+            <h2 class="section-title">Choose your <em>experience</em>.</h2>
+            <p class="section-lead">Every session is tailored to you. These are the starting points — tell me what you have in mind and I'll build something just for you.</p>
+          </header>
+
+          <div class="sessions-grid">
+            <article class="session-card reveal">
+              <h3>Portrait</h3>
+              <p class="price">Individual session</p>
+              <ul>
+                <li><span>Duration</span><strong>1 hour</strong></li>
+                <li><span>Location</span><strong>Miami</strong></li>
+                <li><span>Edited photos</span><strong>15</strong></li>
+                <li><span>Delivery</span><strong>7 days</strong></li>
+              </ul>
+              <a href="#contact" class="btn">Request pricing</a>
+            </article>
+
+            <article class="session-card reveal">
+              <h3>Couples</h3>
+              <p class="price">Two or more people</p>
+              <ul>
+                <li><span>Duration</span><strong>1.5 hours</strong></li>
+                <li><span>Location</span><strong>Miami</strong></li>
+                <li><span>Edited photos</span><strong>25</strong></li>
+                <li><span>Delivery</span><strong>7 days</strong></li>
+              </ul>
+              <a href="#contact" class="btn">Request pricing</a>
+            </article>
+
+            <article class="session-card reveal">
+              <h3>Maternity &amp; Events</h3>
+              <p class="price">Custom session</p>
+              <ul>
+                <li><span>Duration</span><strong>2–4 hours</strong></li>
+                <li><span>Location</span><strong>Your choice</strong></li>
+                <li><span>Edited photos</span><strong>40+</strong></li>
+                <li><span>Delivery</span><strong>10 days</strong></li>
+              </ul>
+              <a href="#contact" class="btn">Request pricing</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section about">
+        <div class="section-narrow">
+          <header class="section-head reveal">
+            <p class="section-eyebrow">FAQ</p>
+            <h2 class="section-title">Good to <em>know</em>.</h2>
+          </header>
+          <div class="faq-list reveal">
+            <div class="faq-item">
+              <details>
+                <summary>Where do sessions take place?</summary>
+                <p>Most sessions happen in Miami, Miami Beach, Doral and Hialeah. I can also travel to other locations within South Florida for an additional fee — just let me know where you have in mind.</p>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>How long until I receive my photos?</summary>
+                <p>Portrait and couples sessions are delivered within 7 days. Maternity and event sessions within 10 days. You'll receive a private online gallery with high-resolution downloads and print-ready files.</p>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>How do I book a session?</summary>
+                <p>Fill out the contact form, send me an email or message me on WhatsApp. Once we agree on the details, a 50% deposit reserves your date. The remaining balance is due on the day of the session.</p>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>What should I wear?</summary>
+                <p>Once your date is booked, I'll send you a personalized guide with outfit ideas, color palettes and location suggestions based on the mood you want for the session.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="section-narrow">
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <p class="section-eyebrow">Contact</p>
+              <h3>Let's create something <em style="font-family:var(--serif);color:var(--accent)">together</em>.</h3>
+              <p>Tell me about your session — the occasion, the mood, the people. I'll get back to you within 24 hours with availability and pricing.</p>
+              <dl>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:reymarsphotography@gmail.com">reymarsphotography@gmail.com</a></dd>
+                </div>
+                <div>
+                  <dt>Phone / WhatsApp</dt>
+                  <dd><a href="tel:+17865648544">786-564-8544</a></dd>
+                </div>
+                <div>
+                  <dt>Based in</dt>
+                  <dd>Miami, Florida</dd>
+                </div>
+              </dl>
+            </div>
+
+            <form class="contact-form reveal" method="post" action="https://formspree.io/f/xyzjedrz" autocomplete="on">
+              <input type="hidden" name="_subject" value="New message from reymarsphotography.art" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" type="text" name="name" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Your email</label>
+                <input id="email" type="email" name="email" required autocomplete="email" />
+              </div>
+              <div>
+                <label for="message">Tell me about your session</label>
+                <textarea id="message" name="message" required minlength="10"></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© Reymars Photography · Miami</span>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/reymar_s_photography/" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/reymarsphotography/" rel="noopener" target="_blank">Facebook</a>
+        <a href="mailto:reymarsphotography@gmail.com">Email</a>
+      </div>
+    </footer>
+
+    <div class="fab">
+      <a href="#contact" class="fab-book">Book a Session</a>
+      <a href="https://wa.me/17865648544?text=Hi%20Reymars%2C%20I'd%20like%20to%20book%20a%20photoshoot!" class="fab-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       </a>
-      <a href="#top" class="top-btn">Top</a>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+      <button class="lightbox-close" aria-label="Close preview">×</button>
+      <img src="" alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
 
     <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      // Nav scroll effect
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 80);
+      }, { passive: true });
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      const lightboxCap = lightbox.querySelector('.lightbox-caption');
+      const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+      document.querySelectorAll('.grid-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          lightboxImg.src = btn.dataset.full;
+          lightboxImg.alt = btn.querySelector('img').alt;
+          lightboxCap.textContent = btn.querySelector('.grid-caption')?.textContent || '';
+          lightbox.showModal();
+        });
+      });
+      lightboxClose.addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.close();
+      });
+
+      // Reveal on scroll
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
       }
-      (function(){
-        var topBtn = document.querySelector('.top-btn');
-        function onScroll(){
-          if (window.scrollY > 400) topBtn.classList.add('show');
-          else topBtn.classList.remove('show');
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-      })();
     </script>
   </body>
 </html>
